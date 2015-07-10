@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Computers | Mycow's World]]></title>
+  <link href="http://mycowsworld.com/blog/categories/computers/atom.xml" rel="self"/>
+  <link href="http://mycowsworld.com/"/>
+  <updated>2015-06-29T23:41:16-04:00</updated>
+  <id>http://mycowsworld.com/</id>
+  <author>
+    <name><![CDATA[Michael Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Building a Computer]]></title>
+    <link href="http://mycowsworld.com/blog/2014/04/27/building-a-computer/"/>
+    <updated>2014-04-27T12:49:00-04:00</updated>
+    <id>http://mycowsworld.com/blog/2014/04/27/building-a-computer</id>
+    <content type="html"><![CDATA[<p>Successfully built my first computer! For the list of parts, go to this link &ndash; <a href="http://pcpartpicker.com/p/2TYWa">PC Part Picker</a>. That website was extremely helpful. It checks your parts for compatibility issues and you can see computer builds that other people have posted.</p>
+
+<p><img src="/images/photos/LiPC1.jpg" width="500" title="Parts" ></p>
+
+<p>Click through for more pictures!</p>
+
+<!-- more -->
+
+
+<p><img src="/images/photos/LiPC2.jpg" width="500" title="Case" >
+<img src="/images/photos/LiPC3.jpg" width="500" title="Power Supply" >
+<img src="/images/photos/LiPC4.jpg" width="500" title="Motherboard" >
+<img src="/images/photos/LiPC7.jpg" width="500" title="Case + Motherboard" >
+<img src="/images/photos/LiPC5.jpg" width="500" title="CPU Heat Sink" >
+<img src="/images/photos/LiPC6.jpg" width="500" title="Motherboard + Parts" >
+<img src="/images/photos/LiPC8.jpg" width="500" title="Graphics Card" ></p>
+]]></content>
+  </entry>
+  
+</feed>

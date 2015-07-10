@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tutorial | Mycow's World]]></title>
+  <link href="http://mycowsworld.com/blog/categories/tutorial/atom.xml" rel="self"/>
+  <link href="http://mycowsworld.com/"/>
+  <updated>2015-06-29T23:41:16-04:00</updated>
+  <id>http://mycowsworld.com/</id>
+  <author>
+    <name><![CDATA[Michael Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Octopress with Amazon Web Services]]></title>
+    <link href="http://mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services/"/>
+    <updated>2013-08-04T16:48:00-04:00</updated>
+    <id>http://mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services</id>
+    <content type="html"><![CDATA[<p>When I initially had the idea to start a blog, I was looking up how to set up WordPress with Amazon Web Services (AWS) &ndash; the web host I decided to use. Somehow, I ended up stumbling into Jekyll, which later led me to Octopress. The post describes the steps needed to set up Octopress with AWS.</p>
+
+<!-- more -->
+
+
+<p>There are lots of posts out in the internets that describe other people&rsquo;s experiences with Octopress. Here are a few&hellip;</p>
+
+<ul>
+<li><a href="http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/">http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/</a></li>
+<li><a href="http://nynim.org/blog/2011/12/19/hello-octopress/">http://nynim.org/blog/2011/12/19/hello-octopress/</a></li>
+<li><a href="http://openswitch.org/blog/why-octopress/">http://openswitch.org/blog/why-octopress/</a></li>
+</ul>
+
+
+<p>So how do we get octopress set up with AWS?</p>
+
+<h2>Step 1: Install Octopress</h2>
+
+<p>Follow the instructions here: <a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p>
+
+<h2>Step 2: Install s3_website</h2>
+
+<p>s3_website is a tool used to upload your octopress blog to Amazon S3 (an Amazon Web Service used for web storage). For more information on s3_website, go here: <a href="https://github.com/laurilehmijoki/s3_website">https://github.com/laurilehmijoki/s3_website</a></p>
+
+<p>In the terminal, enter the following commands:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;octopress_blog>
+</span><span class='line'>gem install s3_website
+</span><span class='line'>s3_website cfg create  # creates s3_website.yl (configuration file)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Step 3: Create User in AWS IAM</h2>
+
+<p>AWS IAM (Identity and Access Management) is used to manage access to your resources in AWS. In this step, we&rsquo;ll create a user in IAM that will be used by s3_website.</p>
+
+<ol>
+<li>Go to <a href="https://aws.amazon.com/">https://aws.amazon.com/</a></li>
+<li>Click <strong>My Account / Console</strong> on the top-right of the window and select <strong>AWS Management Console</strong></li>
+<li>Click <strong>Services</strong> at the top-left of the window and select <strong>IAM</strong></li>
+<li>Click <strong>Users</strong> on the left</li>
+<li>Click <strong>Create New Users</strong></li>
+<li>Enter a username and click <strong>Create</strong></li>
+<li>Expand the <strong>Show User Security Credentials</strong> and copy the <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>. Alternatively, you can click <strong>Download Credentials</strong> to save a text file containing the two keys.</li>
+</ol>
+
+
+<h2>Step 4: Configure s3_website</h2>
+
+<p>s3_website requires the keys that were obtained in IAM.</p>
+
+<ol>
+<li>Open &lt;octopress_blog>/s3_website.yml in a text editor</li>
+<li>Under <em>s3_id</em>, enter the <strong>Access Key Id</strong></li>
+<li>Under <em>s3_secret</em>, enter the <strong>Secret Access Key</strong></li>
+<li>Under <em>s3_bucket</em>, enter the name of the S3 bucket (e.g. mywebsite.com)</li>
+<li>Save the file</li>
+</ol>
+
+
+<h2>Step 5: Configure Octopress for s3_website</h2>
+
+<h3>_config.yml</h3>
+
+<p>By default, octopress will generate blog files to a directory named <em>public</em>. s3_website currently expects these files to be in <em>_site</em>.</p>
+
+<p>Open &lt;octopress_blog>/<em>config.yml and set&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>destination: &lt;/em>site</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>config.rb</h3>
+
+<p>Change compass to generate the CSS files to the new destination (_site).</p>
+
+<p>Open &lt;octopress_blog>/config.rb and set&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>css_dir = &ldquo;_site/stylesheets&rdquo;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Support &ldquo;bundle exec rake preview&rdquo; command</h3>
+
+<p>Open &lt;octopress_blog>/Rakefile and set&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>public_dir = &ldquo;_site&rdquo;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Open &lt;octopress_blog>/config.ru and change references of <em>public</em> to <em>_site</em>&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&hellip;
+</span><span class='line'>not_found do
+</span><span class='line'>  send_file(File.join(File.dirname(&lt;strong>FILE&lt;/strong>), &lsquo;_site&rsquo;, &lsquo;404.html&rsquo;), {:status => 404})
+</span><span class='line'>end&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>def send_sinatra_file(path, &amp;missing_file_block)
+</span><span class='line'>  file_path = File.join(File.dirname(&lt;strong>FILE&lt;/strong>), &lsquo;_site&rsquo;,  path)
+</span><span class='line'>  file_path = File.join(file_path, &lsquo;index.html&rsquo;) unless file_path =~ /.[a-z]+$/i
+</span><span class='line'>  File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
+</span><span class='line'>end
+</span><span class='line'>&hellip;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Step 6: Test s3_website</h2>
+
+<p>In the terminal, enter the following commands:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;octopress_blog>
+</span><span class='line'>rake generate
+</span><span class='line'>s3_website push  # pushes website files to s3 bucket</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Check mywebsite.com to see if the changes were successful!</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="http://www.robertbrewitz.com/2013/04/relaunching-the-blog-with-octopress-and-amazon-s3/">http://www.robertbrewitz.com/2013/04/relaunching-the-blog-with-octopress-and-amazon-s3/</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up a GoDaddy Domain Name with Amazon Web Services]]></title>
+    <link href="http://mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services/"/>
+    <updated>2013-07-29T22:55:00-04:00</updated>
+    <id>http://mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services</id>
+    <content type="html"><![CDATA[<p>One day, I decided I wanted to start a website. So then&hellip; now what? The following post describes the steps I took to purchase a domain name and get it set up with Amazon&rsquo;s web hosting services.</p>
+
+<!-- more -->
+
+
+<h2>Step 1: Register for a domain name</h2>
+
+<p>Go to <a href="http://www.godaddy.com/">http://www.godaddy.com/</a> and purchase a domain name (e.g. mycowsworld.com)</p>
+
+<p>This reserves a name that people will use to access your website. Now you&rsquo;ll need a place to store the files for your website.</p>
+
+<h2>Step 2: Sign up for Amazon Web Services (AWS)</h2>
+
+<p>Go to <a href="https://aws.amazon.com/">https://aws.amazon.com/</a> and sign up for an account.</p>
+
+<p>Amazon has some nice services for cloud computing. One of these services can be used for website hosting (Amazon S3). AWS costs are scaled based on usage. My current costs are about 50 cents a month to host this blog.</p>
+
+<h2>Step 3: Setup Amazon S3 (Simple Storage Service)</h2>
+
+<p>In S3, you create &ldquo;buckets&rdquo; that will be used to store data. Each bucket can be configured individually, such as changing who has permissions to access a particular bucket.</p>
+
+<p>In this case, we&rsquo;ll create two buckets: one for mywebsite.com and the other for www.mywebsite.com. We&rsquo;ll configure it so that the content will be stored in mywebsite.com and that requests for www.mywebsite.com will be redirected to mywebsite.com.</p>
+
+<ol>
+<li>Click <strong>My Account / Console</strong> on the top-right of the window and select <strong>AWS Management Console</strong></li>
+<li>Click <strong>Services</strong> at the top-left of the window and select <strong>S3</strong></li>
+<li>Create two buckets: <strong>mywebsite.com</strong> and <strong>www.mywebsite.com</strong>. Follow these instructions to create a bucket (<a href="http://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html">http://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html</a>).</li>
+</ol>
+
+
+<h3>Upload files to the mywebsite.com bucket</h3>
+
+<ol>
+<li>Click the <strong>mywebsite.com</strong> bucket</li>
+<li>Click <strong>Upload</strong> at the top-left of the screen</li>
+<li>Click <strong>Add Files</strong> on the pop-up that appears and select the various website files. Multiple files can be selected. (If you do not have website files, you can create a test file with the following code)
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sample index.html </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>    Hello World
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+<li>Click <strong>Start Upload</strong> to upload the files to the bucket</li>
+</ol>
+
+
+<h3>Configure bucket permissions to make it accessible to public</h3>
+
+<ol>
+<li>Click <strong>Properties</strong> at the top-right of the screen</li>
+<li>Click <strong>Permissions</strong></li>
+<li>Click <strong>Edit Bucket Policy</strong></li>
+<li>Add the following to the text box (note: make sure you replace www.mywebsite.com with your own domain name)
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>    "Version":"2008-10-17",
+</span><span class='line'>    "Statement":[{
+</span><span class='line'>        "Sid":"AddPerm",
+</span><span class='line'>        "Effect":"Allow",
+</span><span class='line'>        "Principal": {"AWS": "*"},
+</span><span class='line'>        "Action":["s3:GetObject"],
+</span><span class='line'>        "Resource":["arn:aws:s3:::mywebsite.com/*"]
+</span><span class='line'>    }]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+<li>Click <strong>Save</strong> on the pop-up window</li>
+<li>Click <strong>Save</strong> in the *Permissions* pane</li>
+</ol>
+
+
+<h3>Configure bucket for website hosting</h3>
+
+<ol>
+<li>In the <em>Properties</em> pane, select <strong>Static Website Hosting</strong></li>
+<li>Select <strong>Enable website hosting</strong></li>
+<li>For <em>Index Document</em>, enter in the filename that will be used as the home page for your website. Typically this is <strong>index.html</strong> (make sure this file is uploaded to the bucket!)</li>
+<li>Click <strong>Save</strong> in the <em>Static Website Hosting</em> pane</li>
+<li>To test, click the <strong>Endpoint URL</strong> shown in the <em>Static Website Hosting</em> pane and see if your website loads.</li>
+</ol>
+
+
+<h3>Redirect www.mywebsite.com requests to mywebsite.com</h3>
+
+<ol>
+<li>Click <strong>All Buckets</strong> on the top left of the page</li>
+<li>Click the <strong>www.mywebsite.com</strong> bucket</li>
+<li>Click <strong>Properties</strong> on the top-right</li>
+<li>Click <strong>Static Website Hosting</strong></li>
+<li>Select <strong>Redirect all requests to another host name</strong></li>
+<li>Type <strong>mywebsite.com</strong> in the <em>Redirect all requests to</em> field</li>
+<li>Click <strong>Save</strong></li>
+<li>To test, click the <strong>Endpoint URL</strong> shown in the <em>Static Website Hosting</em> pane and see if your website loads.</li>
+</ol>
+
+
+<h2>Step 4: Setup Amazon Route 53</h2>
+
+<p>Amazon Route 53 will be used to link the domain name you purchased to the buckets you just created.</p>
+
+<ol>
+<li>Click <strong>Services</strong> at the top-left of the window and select <strong>Route 53</strong></li>
+<li>Click <strong>Create Hosted Zone</strong> near the top of the screen</li>
+<li>On the right side of the screen, enter your domain name (e.g. mywebsite.com)</li>
+<li>Click <strong>Create Hosted Zone</strong> at the bottom of the panel (After you create a hosted zone, it should appear in the main panel with a check mark)</li>
+<li>Click <strong>Go to Record Sets</strong> near the top of the screen</li>
+</ol>
+
+
+<h3>Create the “A” Record</h3>
+
+<p>The &ldquo;A&rdquo; Record will point mywebsite.com to the S3 bucket</p>
+
+<ol>
+<li>Click <strong>Create Record Set</strong></li>
+<li>Change <em>Type</em> to <strong>A &ndash; IPv4 address</strong></li>
+<li>Change <em>Alias</em> to <strong>Yes</strong></li>
+<li>Click the <em>Alias Target</em> field and select <strong>mywebsite.com (s3-website-*)</strong></li>
+<li>Click <strong>Create Record Set</strong></li>
+</ol>
+
+
+<h3>Create the “CNAME” Record</h3>
+
+<p>The &ldquo;CNAME&rdquo; Record will redirect www.mywebsite.com requests to mywebsite.com</p>
+
+<ol>
+<li>Click <strong>Create Record Set</strong></li>
+<li>In the <em>Name</em> field, add <strong>www.</strong> before <em>mywebsite.com</em></li>
+<li>Change <em>Type</em> to <strong>CNAME</strong></li>
+<li>Change <em>Alias</em> to <strong>No</strong></li>
+<li>In <em>Value</em>, enter in <strong>mywebsite.com</strong></li>
+<li>Click <strong>Create Record Set</strong></li>
+</ol>
+
+
+<h2>Step 5: Configure the DNS provider (GoDaddy) to use Amazon Route 53 Name Servers</h2>
+
+<p>As the DNS provider, you will need to tell GoDaddy to update the Domain Name Servers to point to the Amazon Name Servers.</p>
+
+<ol>
+<li>In the Record Sets page, note the 4 addresses in the &ldquo;NS&rdquo; entry (e.g. ns-123.awsdns-55.net)</li>
+<li>Log in to GoDaddy.com</li>
+<li>Click <strong>My Account</strong> at the top of the screen</li>
+<li>In the <em>DOMAINS</em> pane, click <strong>Launch</strong></li>
+<li>Click on the Domain Name that you want to edit</li>
+<li>In the <em>Nameservers</em> section, select <strong>Set Nameservers</strong></li>
+<li>Select <strong>I have specific nameservers for my domains</strong></li>
+<li>Set the nameservers to the ones noted in the &ldquo;NS&rdquo; entry in Step 5.1 (you can omit the ending period)</li>
+</ol>
+
+
+<h2>Step 6: Test your website</h2>
+
+<p>Try entering your domain name into your web browser. Both mywebsite.com and www.mywebsite.com should work!</p>
+
+<h2>What is happening?</h2>
+
+<p>The following image helps describe the process when a user enters an address into the web browser.</p>
+
+<p><a href="http://mycowsworld.com/images/diagrams/dns_flow_chart.jpg">
+<img src="http://mycowsworld.com/images/diagrams/dns_flow_chart.jpg" alt="DNS Flow Chart" width="800" height="600"></a></p>
+
+<ul>
+<li>There are 13 Root Name Servers spread across the world. These servers parse the request for the top level domain (e.g. .com, .net, etc) and pass to the appropriate server</li>
+<li>Authoritative Name Servers are defined in the Domain Name manager (e.g. GoDaddy.com). We defined the Name Servers to point to the ones provided by Amazon Route 53</li>
+<li>In Amazon Route 53, we defined the A record to return the IP address of one of the S3 buckets that was created</li>
+<li>DNS records have a “TTL” (time-to-live) setting which tells the ISP Name server how long it can hold a record before needing to get a new copy in case of changes.</li>
+</ul>
+
+
+<h2>References</h2>
+
+<h3>Configuring AWS and GoDaddy settings</h3>
+
+<ul>
+<li><a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html</a></li>
+<li><a href="http://steveliles.github.io/pointing_a_domain_name_to_an_amazon_s3_bucket.html">http://steveliles.github.io/pointing_a_domain_name_to_an_amazon_s3_bucket.html</a></li>
+<li><a href="http://support.godaddy.com/groups/web-hosting/forum/topic/using-amazon-s3-with-godaddy-registered-domain/?pc_split_value=1">http://support.godaddy.com/groups/web-hosting/forum/topic/using-amazon-s3-with-godaddy-registered-domain/?pc_split_value=1</a></li>
+</ul>
+
+
+<h3>DNS – How does it work?</h3>
+
+<ul>
+<li><a href="http://www.mygreatname.com/how-dns-works/e-04-how-dns-works.htm">http://www.mygreatname.com/how-dns-works/e-04-how-dns-works.htm</a></li>
+<li><a href="http://dyn.com/blog/dns-why-its-important-how-it-works/">http://dyn.com/blog/dns-why-its-important-how-it-works/</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Mycow's World]]></title>
+  <link href="http://mycowsworld.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://mycowsworld.com/"/>
+  <updated>2015-06-29T23:41:16-04:00</updated>
+  <id>http://mycowsworld.com/</id>
+  <author>
+    <name><![CDATA[Michael Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Octopress with Amazon Web Services]]></title>
+    <link href="http://mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services/"/>
+    <updated>2013-08-04T16:48:00-04:00</updated>
+    <id>http://mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services</id>
+    <content type="html"><![CDATA[<p>When I initially had the idea to start a blog, I was looking up how to set up WordPress with Amazon Web Services (AWS) &ndash; the web host I decided to use. Somehow, I ended up stumbling into Jekyll, which later led me to Octopress. The post describes the steps needed to set up Octopress with AWS.</p>
+
+<!-- more -->
+
+
+<p>There are lots of posts out in the internets that describe other people&rsquo;s experiences with Octopress. Here are a few&hellip;</p>
+
+<ul>
+<li><a href="http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/">http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/</a></li>
+<li><a href="http://nynim.org/blog/2011/12/19/hello-octopress/">http://nynim.org/blog/2011/12/19/hello-octopress/</a></li>
+<li><a href="http://openswitch.org/blog/why-octopress/">http://openswitch.org/blog/why-octopress/</a></li>
+</ul>
+
+
+<p>So how do we get octopress set up with AWS?</p>
+
+<h2>Step 1: Install Octopress</h2>
+
+<p>Follow the instructions here: <a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p>
+
+<h2>Step 2: Install s3_website</h2>
+
+<p>s3_website is a tool used to upload your octopress blog to Amazon S3 (an Amazon Web Service used for web storage). For more information on s3_website, go here: <a href="https://github.com/laurilehmijoki/s3_website">https://github.com/laurilehmijoki/s3_website</a></p>
+
+<p>In the terminal, enter the following commands:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;octopress_blog>
+</span><span class='line'>gem install s3_website
+</span><span class='line'>s3_website cfg create  # creates s3_website.yl (configuration file)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Step 3: Create User in AWS IAM</h2>
+
+<p>AWS IAM (Identity and Access Management) is used to manage access to your resources in AWS. In this step, we&rsquo;ll create a user in IAM that will be used by s3_website.</p>
+
+<ol>
+<li>Go to <a href="https://aws.amazon.com/">https://aws.amazon.com/</a></li>
+<li>Click <strong>My Account / Console</strong> on the top-right of the window and select <strong>AWS Management Console</strong></li>
+<li>Click <strong>Services</strong> at the top-left of the window and select <strong>IAM</strong></li>
+<li>Click <strong>Users</strong> on the left</li>
+<li>Click <strong>Create New Users</strong></li>
+<li>Enter a username and click <strong>Create</strong></li>
+<li>Expand the <strong>Show User Security Credentials</strong> and copy the <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>. Alternatively, you can click <strong>Download Credentials</strong> to save a text file containing the two keys.</li>
+</ol>
+
+
+<h2>Step 4: Configure s3_website</h2>
+
+<p>s3_website requires the keys that were obtained in IAM.</p>
+
+<ol>
+<li>Open &lt;octopress_blog>/s3_website.yml in a text editor</li>
+<li>Under <em>s3_id</em>, enter the <strong>Access Key Id</strong></li>
+<li>Under <em>s3_secret</em>, enter the <strong>Secret Access Key</strong></li>
+<li>Under <em>s3_bucket</em>, enter the name of the S3 bucket (e.g. mywebsite.com)</li>
+<li>Save the file</li>
+</ol>
+
+
+<h2>Step 5: Configure Octopress for s3_website</h2>
+
+<h3>_config.yml</h3>
+
+<p>By default, octopress will generate blog files to a directory named <em>public</em>. s3_website currently expects these files to be in <em>_site</em>.</p>
+
+<p>Open &lt;octopress_blog>/<em>config.yml and set&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>destination: &lt;/em>site</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>config.rb</h3>
+
+<p>Change compass to generate the CSS files to the new destination (_site).</p>
+
+<p>Open &lt;octopress_blog>/config.rb and set&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>css_dir = &ldquo;_site/stylesheets&rdquo;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Support &ldquo;bundle exec rake preview&rdquo; command</h3>
+
+<p>Open &lt;octopress_blog>/Rakefile and set&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>public_dir = &ldquo;_site&rdquo;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Open &lt;octopress_blog>/config.ru and change references of <em>public</em> to <em>_site</em>&hellip;
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&hellip;
+</span><span class='line'>not_found do
+</span><span class='line'>  send_file(File.join(File.dirname(&lt;strong>FILE&lt;/strong>), &lsquo;_site&rsquo;, &lsquo;404.html&rsquo;), {:status => 404})
+</span><span class='line'>end&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>def send_sinatra_file(path, &amp;missing_file_block)
+</span><span class='line'>  file_path = File.join(File.dirname(&lt;strong>FILE&lt;/strong>), &lsquo;_site&rsquo;,  path)
+</span><span class='line'>  file_path = File.join(file_path, &lsquo;index.html&rsquo;) unless file_path =~ /.[a-z]+$/i
+</span><span class='line'>  File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
+</span><span class='line'>end
+</span><span class='line'>&hellip;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Step 6: Test s3_website</h2>
+
+<p>In the terminal, enter the following commands:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;octopress_blog>
+</span><span class='line'>rake generate
+</span><span class='line'>s3_website push  # pushes website files to s3 bucket</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Check mywebsite.com to see if the changes were successful!</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="http://www.robertbrewitz.com/2013/04/relaunching-the-blog-with-octopress-and-amazon-s3/">http://www.robertbrewitz.com/2013/04/relaunching-the-blog-with-octopress-and-amazon-s3/</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

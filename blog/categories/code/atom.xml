@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Code | Mycow's World]]></title>
+  <link href="http://mycowsworld.com/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://mycowsworld.com/"/>
+  <updated>2015-06-29T23:41:16-04:00</updated>
+  <id>http://mycowsworld.com/</id>
+  <author>
+    <name><![CDATA[Michael Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Enhanced Steam Safari]]></title>
+    <link href="http://mycowsworld.com/blog/2014/02/03/enhanced-steam-safari/"/>
+    <updated>2014-02-03T22:05:00-05:00</updated>
+    <id>http://mycowsworld.com/blog/2014/02/03/enhanced-steam-safari</id>
+    <content type="html"><![CDATA[<p>A new coding project was added to the <a href="/code.html">Code</a> page.</p>
+
+<p>This is a port of the <a href="http://www.enhancedsteam.com/">Enhanced Steam</a> extension to Safari. The project is stored <a href="https://github.com/jshackles/Enhanced_Steam_Safari">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS Project: Paint]]></title>
+    <link href="http://mycowsworld.com/blog/2013/12/31/ios-project-paint/"/>
+    <updated>2013-12-31T19:25:00-05:00</updated>
+    <id>http://mycowsworld.com/blog/2013/12/31/ios-project-paint</id>
+    <content type="html"><![CDATA[<p>A new coding project was added to the <a href="/code.html">Code</a> page.</p>
+
+<p>This project was to create a Paint application in iOS. It was largely based on this <a href="http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit">tutorial</a>.</p>
+
+<p>I&rsquo;m considering adding some more features like <i>undo</i> or figuring out a way to make the lines look smoother.</p>
+
+<p>For the source code and documentation, click <a href="https://github.com/moduli/Paint_iOS">here</a></p>
+
+<p><img src="/images/photos/paint_main.png" width="377" title="Paint (main)" >
+<img src="/images/photos/paint_settings.png" width="377" title="Paint (settings)" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coding Project: Battleship (iOS)]]></title>
+    <link href="http://mycowsworld.com/blog/2013/12/16/coding-project-battleship-ios/"/>
+    <updated>2013-12-16T23:34:00-05:00</updated>
+    <id>http://mycowsworld.com/blog/2013/12/16/coding-project-battleship-ios</id>
+    <content type="html"><![CDATA[<p>A new coding project was added to the <a href="/code.html">Code</a> page.</p>
+
+<p>This is an iOS project that was done for a class. The project was to recreate the game &ldquo;Classic Battleships&rdquo; (see <a href="http://www.freeworldgroup.com/games9/gameindex/classicbattleships.htm">here</a>) on iOS.</p>
+
+<p>For the source code and documentation, click <a href="https://github.com/moduli/Battleship_iOS">here</a></p>
+
+<p><img src="/images/photos/battleship_game.png" width="377" title="Battleship" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime Text]]></title>
+    <link href="http://mycowsworld.com/blog/2013/11/16/sublime-text/"/>
+    <updated>2013-11-16T00:18:00-05:00</updated>
+    <id>http://mycowsworld.com/blog/2013/11/16/sublime-text</id>
+    <content type="html"><![CDATA[<p><a href="http://www.sublimetext.com">Sublime Text</a> is an awesome text editor that is fast, has a simple interface, and can be customized to your heart&rsquo;s content. The following links walk through installing some of the more popular plugins.</p>
+
+<h2>Must-haves</h2>
+
+<ul>
+<li><a href="https://sublime.wbond.net">Package Control</a> &ndash; A Sublime Text Package Manager. Easily installs and updates Sublime Text plugins.</li>
+<li><a href="https://github.com/buymeasoda/soda-theme/">Soda Theme</a> &ndash; The Dark Theme is so tasty.</li>
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+<li><a href="http://blog.alexmaccaw.com/sublime-text">http://blog.alexmaccaw.com/sublime-text</a></li>
+<li><a href="http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/">http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/</a></li>
+<li><a href="https://coderwall.com/p/ekwjca">https://coderwall.com/p/ekwjca</a></li>
+<li><a href="http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2">http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coding Project Added: Labyrinth]]></title>
+    <link href="http://mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth/"/>
+    <updated>2013-11-12T22:50:00-05:00</updated>
+    <id>http://mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth</id>
+    <content type="html"><![CDATA[<p>A new coding project was added to the <a href="/code.html">Code</a> page.</p>
+
+<p>This is a HTML5/Javascript project that demonstrates device orientation events. Note that the project was programmed such that it only works on a mobile device (e.g. phones, tablets).</p>
+
+<p>To try the demo, click <a href="/code/Labyrinth">here</a>. For the source code and documentation, click <a href="https://github.com/moduli/Labyrinth">here</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
