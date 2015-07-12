@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Boston Fishackathon 2015 - Mycow's World</title>
+  <title>Setting Up a GoDaddy Domain Name with GitHub - Mycow's World</title>
   <meta name="author" content="Michael Li">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mycowsworld.com/blog/2015/07/12/boston-fishackathon-2015">
+  <link rel="canonical" href="http://mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -99,7 +99,7 @@
 
   <header>
   <div class="jumbotron">
-    Boston Fishackathon 2015
+    Setting Up a GoDaddy Domain Name With GitHub
 	<h5>
 
 
@@ -112,12 +112,79 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2015-07-12T02:07:00-04:00" pubdate data-updated="true">Jul 12<span>th</span>, 2015</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2015-07-12T15:30:00-04:00" pubdate data-updated="true">Jul 12<span>th</span>, 2015</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>I recently participated in the <a href="http://fishackathon.co">Boston Fishackathon</a>! Check out the project that my team created <a href="http://challengepost.com/software/yeah-buoii">here</a>.</p>
+      <p>I wanted to try using GitHub&rsquo;s <a href="https://pages.github.com">Pages</a> feature to host my website. Turns out it was very simple to do, and the best part is it&rsquo;s free!</p>
+
+<p>Here&rsquo;s a tutorial for setting up a GoDaddy domain name with this feature.</p>
+
+<!-- more -->
+
+
+<h2>Step 1: Register for a domain name</h2>
+
+<p>Go to <a href="http://www.godaddy.com/">http://www.godaddy.com/</a> and purchase a domain name (e.g. mycowsworld.com)</p>
+
+<p>This reserves a name that people will use to access your website. Now you&rsquo;ll need a place to store the files for your website.</p>
+
+<h2>Step 2: Create a GitHub account</h2>
+
+<p>Go to <a href="https://github.com">https://github.com</a> and sign up for an account.</p>
+
+<h2>Step 3: Create a GitHub repository</h2>
+
+<p>Follow the instructions <a href="https://pages.github.com">here</a> (scroll down). This creates a repository where you will store your website files.</p>
+
+<h2>Step 4: Link your domain name to the GitHub repository</h2>
+
+<p>Follow the instructions <a href="https://help.github.com/articles/adding-a-cname-file-to-your-repository/">here</a> to connect your domain name (e.g. www.mycowsworld.com) to the GitHub repository.</p>
+
+<h2>Step 5: Configure DNS settings on GoDaddy</h2>
+
+<ol>
+<li>Log in to GoDaddy.com</li>
+<li>Click <strong>My Account</strong> at the top of the screen</li>
+<li>In the <em>DOMAINS</em> pane, expand the section (click the + button) and click <strong>Manage</strong> for the desired domain name.</li>
+<li>Under the <em>Settings</em> tab &ndash;> Nameservers, click <strong>Manage</strong></li>
+<li>Ensure that the <em>Setup Type</em> is set to <strong>Standard</strong> and save the changes. If you do make changes, note that it may take some time for the changes to propagate.</li>
+<li>Under the <em>DNS Zone File</em> tab, click <strong>Add Record</strong></li>
+<li>Select the <strong>CNAME</strong> Record Type</li>
+<li>Under <em>Host</em>, enter in your <strong>www</strong></li>
+<li>Under <em>Points to:</em>, enter in the URL of the GitHub repository (e.g. username.github.io)</li>
+<li>Click <strong>Finish</strong></li>
+</ol>
+
+
+<p>See <a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">this page</a> for more information.</p>
+
+<p>It will take some time for the changes to get pushed out, but once that happens, www.<URL>.com should take you to your GitHub page.</p>
+
+<h2>Step 6: Redirect <URL>.com to www.<URL>.com</h2>
+
+<ol>
+<li>Back in the GoDaddy page under the <em>Settings</em> tab &ndash;> Forwarding, click <strong>Manage</strong> under <em>Domain</em>.</li>
+<li>Click <strong>Add Domain Forwarding</strong></li>
+<li>Under <em>Forward To</em>, set it to the desired webpage (e.g. <a href="http://www.mycowsworld.com">http://www.mycowsworld.com</a>)</li>
+<li>Under <em>Redirect Type</em>, set it to <strong>301 Permanent</strong></li>
+<li>Under <em>Forward Settings</em>, select <strong>Forward Only</strong></li>
+<li>Check the <strong>Update my nameservers and DNS Settings to support this change</strong></li>
+<li>Click <strong>Add</strong></li>
+</ol>
+
+
+<h2>References</h2>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/23097397/github-pages-setting-up-custom-domain">http://stackoverflow.com/questions/23097397/github-pages-setting-up-custom-domain</a></li>
+<li><a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/</a></li>
+<li><a href="https://www.godaddy.com/help/managing-dns-for-your-domain-names-680">https://www.godaddy.com/help/managing-dns-for-your-domain-names-680</a></li>
+<li><a href="https://pages.github.com">https://pages.github.com</a></li>
+<li><a href="https://help.github.com/articles/adding-a-cname-file-to-your-repository/">https://help.github.com/articles/adding-a-cname-file-to-your-repository/</a></li>
+</ul>
+
 
     </div>
   </div>
@@ -136,9 +203,13 @@
 
 
 
-  <a href="/blog/categories/code/"><span class="badge">Code</span></a>
+  <a href="/blog/categories/dns/"><span class="badge">DNS</span></a>
 
-  <a href="/blog/categories/events/"><span class="badge">Events</span></a>
+  <a href="/blog/categories/github/"><span class="badge">Github</span></a>
+
+  <a href="/blog/categories/tutorial/"><span class="badge">Tutorial</span></a>
+
+  <a href="/blog/categories/website/"><span class="badge">Website</span></a>
 
 
 
@@ -172,10 +243,8 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2014/04/27/building-a-computer/" title="Previous Post: Building a Computer">&laquo; Building a Computer</a>
+            <a class="basic-alignment left" href="/blog/2015/07/12/boston-fishackathon-2015/" title="Previous Post: Boston Fishackathon 2015">&laquo; Boston Fishackathon 2015</a>
           
-          
-            <a class="basic-alignment right" href="/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github/" title="Next Post: Setting Up a GoDaddy Domain Name with GitHub">Setting Up a GoDaddy Domain Name with GitHub &raquo;</a>
           
         </p>
       </div>
@@ -213,8 +282,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mycowsworld.com/blog/2015/07/12/boston-fishackathon-2015/';
-        var disqus_url = 'http://mycowsworld.com/blog/2015/07/12/boston-fishackathon-2015/';
+        var disqus_identifier = 'http://mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github/';
+        var disqus_url = 'http://mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github/';
         var disqus_script = 'embed.js';
       
     (function () {
