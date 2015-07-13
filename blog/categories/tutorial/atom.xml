@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorial | Mycow's World]]></title>
   <link href="http://mycowsworld.com/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://mycowsworld.com/"/>
-  <updated>2015-07-12T18:09:40-04:00</updated>
+  <updated>2015-07-13T00:20:43-04:00</updated>
   <id>http://mycowsworld.com/</id>
   <author>
     <name><![CDATA[Michael Li]]></name>
@@ -54,16 +54,16 @@
 <li>Under the <em>DNS Zone File</em> tab, click <strong>Add Record</strong></li>
 <li>Select the <strong>CNAME</strong> Record Type</li>
 <li>Under <em>Host</em>, enter in your <strong>www</strong></li>
-<li>Under <em>Points to:</em>, enter in the URL of the GitHub repository (e.g. username.github.io)</li>
+<li>Under <em>Points to</em>, enter in the URL of the GitHub repository (e.g. username.github.io)</li>
 <li>Click <strong>Finish</strong></li>
 </ol>
 
 
 <p>See <a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">this page</a> for more information.</p>
 
-<p>It will take some time for the changes to get pushed out, but once that happens, www.<URL>.com should take you to your GitHub page.</p>
+<p>It will take some time for the changes to get pushed out, but once that happens, www.URL.com should take you to your GitHub page.</p>
 
-<h2>Step 6: Redirect <URL>.com to www.<URL>.com</h2>
+<h2>Step 6: Redirect URL.com to www.URL.com</h2>
 
 <ol>
 <li>Back in the GoDaddy page under the <em>Settings</em> tab &ndash;> Forwarding, click <strong>Manage</strong> under <em>Domain</em>.</li>
