@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Website | Mycow's World]]></title>
   <link href="http://mycowsworld.com/blog/categories/website/atom.xml" rel="self"/>
   <link href="http://mycowsworld.com/"/>
-  <updated>2015-07-13T00:20:43-04:00</updated>
+  <updated>2016-06-28T02:13:24-04:00</updated>
   <id>http://mycowsworld.com/</id>
   <author>
     <name><![CDATA[Michael Li]]></name>
@@ -261,9 +261,11 @@
 </ol>
 
 
+<p>Tip from Kelton Manzanares: Make sure you delete the default CNAME record in Godaddy for www for your www. domain to work.</p>
+
 <h2>Step 6: Test your website</h2>
 
-<p>Try entering your domain name into your web browser. Both mywebsite.com and www.mywebsite.com should work!</p>
+<p>Try entering your domain name into your web browser. Both mywebsite.com and www.mywebsite.com should work! Note that it may take some time (up to several hours) before these settings are propagated to the various servers on the internet.</p>
 
 <h2>What is happening?</h2>
 
