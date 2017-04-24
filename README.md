@@ -1,6 +1,4 @@
 moduli.github.io
 ================
 
-blog
-
-Uses the http://octopress.org/ framework
+Personal blog (www.mycowsworld.com)
