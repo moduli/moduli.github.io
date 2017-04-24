@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.mycowsworld.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.mycowsworld.com/" rel="alternate" type="text/html" /><updated>2017-04-23T22:05:07-04:00</updated><id>http://www.mycowsworld.com/</id><title type="html">Mycow’s World</title><subtitle>Hi, I'm Michael Li. Welcome to my world.
+</subtitle><entry><title type="html">Setting Up a GoDaddy Domain Name with GitHub</title><link href="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html" rel="alternate" type="text/html" title="Setting Up a GoDaddy Domain Name with GitHub" /><published>2015-07-12T15:30:00-04:00</published><updated>2015-07-12T15:30:00-04:00</updated><id>http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html">&lt;p&gt;I wanted to try using GitHub’s &lt;a href=&quot;https://pages.github.com&quot;&gt;Pages&lt;/a&gt; feature to host my website. Turns out it was very simple to do, and the best part is it’s free!&lt;/p&gt;
+
+&lt;p&gt;Here’s a tutorial for setting up a GoDaddy domain name with this feature.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;step-1-register-for-a-domain-name&quot;&gt;Step 1: Register for a domain name&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&quot;http://www.godaddy.com/&quot;&gt;http://www.godaddy.com/&lt;/a&gt; and purchase a domain name (e.g. mycowsworld.com)&lt;/p&gt;
+
+&lt;p&gt;This reserves a name that people will use to access your website. Now you’ll need a place to store the files for your website.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-create-a-github-account&quot;&gt;Step 2: Create a GitHub account&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&quot;https://github.com&quot;&gt;https://github.com&lt;/a&gt; and sign up for an account.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-create-a-github-repository&quot;&gt;Step 3: Create a GitHub repository&lt;/h2&gt;
+&lt;p&gt;Follow the instructions &lt;a href=&quot;https://pages.github.com&quot;&gt;here&lt;/a&gt; (scroll down). This creates a repository where you will store your website files.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-link-your-domain-name-to-the-github-repository&quot;&gt;Step 4: Link your domain name to the GitHub repository&lt;/h2&gt;
+&lt;p&gt;Follow the instructions &lt;a href=&quot;https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/&quot;&gt;here&lt;/a&gt; to connect your domain name (e.g. www.mycowsworld.com) to the GitHub repository.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5-configure-dns-settings-on-godaddy&quot;&gt;Step 5: Configure DNS settings on GoDaddy&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Log in to GoDaddy.com&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;My Account&lt;/strong&gt; at the top of the screen&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;DOMAINS&lt;/em&gt; pane, expand the section (click the + button) and click &lt;strong&gt;Manage&lt;/strong&gt; for the desired domain name.&lt;/li&gt;
+  &lt;li&gt;Under the &lt;em&gt;Settings&lt;/em&gt; tab -&amp;gt; Nameservers, click &lt;strong&gt;Manage&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Ensure that the &lt;em&gt;Setup Type&lt;/em&gt; is set to &lt;strong&gt;Standard&lt;/strong&gt; and save the changes. If you do make changes, note that it may take some time for the changes to propagate.&lt;/li&gt;
+  &lt;li&gt;Under the &lt;em&gt;DNS Zone File&lt;/em&gt; tab, click &lt;strong&gt;Add Record&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Select the &lt;strong&gt;CNAME&lt;/strong&gt; Record Type&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;Host&lt;/em&gt;, enter in your &lt;strong&gt;www&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;Points to&lt;/em&gt;, enter in the URL of the GitHub repository (e.g. username.github.io)&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Finish&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&quot;&gt;this page&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;p&gt;It will take some time for the changes to get pushed out, but once that happens, www.URL.com should take you to your GitHub page.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-redirect-urlcom-to-wwwurlcom&quot;&gt;Step 6: Redirect URL.com to www.URL.com&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Back in the GoDaddy page under the &lt;em&gt;Settings&lt;/em&gt; tab -&amp;gt; Forwarding, click &lt;strong&gt;Manage&lt;/strong&gt; under &lt;em&gt;Domain&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Add Domain Forwarding&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;Forward To&lt;/em&gt;, set it to the desired webpage (e.g. http://www.mycowsworld.com)&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;Redirect Type&lt;/em&gt;, set it to &lt;strong&gt;301 Permanent&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;Forward Settings&lt;/em&gt;, select &lt;strong&gt;Forward Only&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Check the &lt;strong&gt;Update my nameservers and DNS Settings to support this change&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Add&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23097397/github-pages-setting-up-custom-domain&quot;&gt;http://stackoverflow.com/questions/23097397/github-pages-setting-up-custom-domain&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/&quot;&gt;https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.godaddy.com/help/managing-dns-for-your-domain-names-680&quot;&gt;https://www.godaddy.com/help/managing-dns-for-your-domain-names-680&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pages.github.com&quot;&gt;https://pages.github.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/adding-a-cname-file-to-your-repository/&quot;&gt;https://help.github.com/articles/adding-a-cname-file-to-your-repository/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Website" /><category term="Github" /><summary type="html">I wanted to try using GitHub’s Pages feature to host my website. Turns out it was very simple to do, and the best part is it’s free! Here’s a tutorial for setting up a GoDaddy domain name with this feature.</summary></entry><entry><title type="html">Boston Fishackathon 2015</title><link href="http://www.mycowsworld.com/blog/2015/07/12/boston-fishackathon-2015.html" rel="alternate" type="text/html" title="Boston Fishackathon 2015" /><published>2015-07-12T02:07:00-04:00</published><updated>2015-07-12T02:07:00-04:00</updated><id>http://www.mycowsworld.com/blog/2015/07/12/boston-fishackathon-2015</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2015/07/12/boston-fishackathon-2015.html">&lt;p&gt;I recently participated in the &lt;a href=&quot;http://fishackathon.co&quot;&gt;Boston Fishackathon&lt;/a&gt;! Check out the project that my team created &lt;a href=&quot;http://challengepost.com/software/yeah-buoii&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Code" /><category term="Hackathon" /><summary type="html">I recently participated in the Boston Fishackathon! Check out the project that my team created here.</summary></entry><entry><title type="html">Building a Computer</title><link href="http://www.mycowsworld.com/blog/2014/04/27/building-a-computer.html" rel="alternate" type="text/html" title="Building a Computer" /><published>2014-04-27T12:49:00-04:00</published><updated>2014-04-27T12:49:00-04:00</updated><id>http://www.mycowsworld.com/blog/2014/04/27/building-a-computer</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2014/04/27/building-a-computer.html">&lt;p&gt;Successfully built my first computer! For the list of parts, go to this link - &lt;a href=&quot;http://pcpartpicker.com/p/2TYWa&quot;&gt;PC Part Picker&lt;/a&gt;. That website was extremely helpful. It checks your parts for compatibility issues, and you can see computer builds that other people have posted.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC1.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC1.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC1.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;!-- more --&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC2.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC2.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC2.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC3.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC3.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC3.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC4.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC4.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC4.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC5.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC5.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC5.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC6.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC6.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC6.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC7.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC7.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC7.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC8.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC8.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2014-04-27-building-a-computer/LiPC8.jpg&quot;  /&gt;
+
+--&gt;</content><author><name></name></author><category term="Computer" /><category term="Photos" /><summary type="html">Successfully built my first computer! For the list of parts, go to this link - PC Part Picker. That website was extremely helpful. It checks your parts for compatibility issues, and you can see computer builds that other people have posted.</summary></entry><entry><title type="html">Paint (iOS)</title><link href="http://www.mycowsworld.com/blog/2013/12/31/paint-ios.html" rel="alternate" type="text/html" title="Paint (iOS)" /><published>2013-12-31T19:25:00-05:00</published><updated>2013-12-31T19:25:00-05:00</updated><id>http://www.mycowsworld.com/blog/2013/12/31/paint-ios</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/12/31/paint-ios.html">&lt;p&gt;In an effort to learn more iOS programming, I followed a tutorial to create a “Paint” program for iOS (&lt;a href=&quot;http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit&quot;&gt;tutorial&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot; alt=&quot;&quot; width=&quot;300&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot;   width=&quot;300&quot; /&gt;
+
+--&gt;
+
+&lt;p&gt;For the source code, click &lt;a href=&quot;https://github.com/moduli/Paint_iOS&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Clicking the Pencil icon allows the user to draw, and clicking the Eraser icon allows the user to erase existing lines.&lt;/p&gt;
+
+&lt;p&gt;In addition, there are several options on the top of the screen&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;i&gt;Reset&lt;/i&gt; button clears everything on the screen&lt;/li&gt;
+  &lt;li&gt;The &lt;i&gt;Save&lt;/i&gt; button saves what’s on the screen to the your photos (camera roll)&lt;/li&gt;
+  &lt;li&gt;The &lt;i&gt;Settings&lt;/i&gt; button presents the user with options to change the size, transparency, and color of the brush.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Code" /><category term="iOS" /><category term="Objective-C" /><summary type="html">In an effort to learn more iOS programming, I followed a tutorial to create a “Paint” program for iOS (tutorial). For the source code, click here</summary></entry><entry><title type="html">Classic Battleships (iOS)</title><link href="http://www.mycowsworld.com/blog/2013/12/16/classic-battleships-ios.html" rel="alternate" type="text/html" title="Classic Battleships (iOS)" /><published>2013-12-16T23:34:00-05:00</published><updated>2013-12-16T23:34:00-05:00</updated><id>http://www.mycowsworld.com/blog/2013/12/16/classic-battleships-ios</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/12/16/classic-battleships-ios.html">&lt;p&gt;One of my class projects was to recreate the game “Classic Battleships” (see &lt;a href=&quot;http://www.freeworldgroup.com/games9/gameindex/classicbattleships.htm&quot;&gt;here&lt;/a&gt; or &lt;a href=&quot;http://www.conceptispuzzles.com/index.aspx?uri=puzzle/battleships&quot;&gt;here&lt;/a&gt; for an explanation of the rules) for iOS.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot; alt=&quot;&quot; width=&quot;300&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot;   width=&quot;300&quot; /&gt;
+
+--&gt;
+
+&lt;p&gt;For the source code, click &lt;a href=&quot;https://github.com/moduli/Battleship_iOS&quot;&gt;here&lt;/a&gt;. Click through for more documentation.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;After launching the game, the user is met with three options…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;New Game - presents a list of levels that can be played. Selecting a level brings the user to the game screen&lt;/li&gt;
+  &lt;li&gt;High Scores - presents a list of high scores for each level&lt;/li&gt;
+  &lt;li&gt;Settings - presents options for the user to select&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the game screen, the user can tap on a tile on the screen. The small black square is an empty tile, a blue square is a water tile, and a grey square is a ship tile. The numbers along the edges of the game screen represent the number of ship tiles in that row or column.&lt;/p&gt;
+
+&lt;p&gt;The other caveat is that the ship tiles must fall under a set number of configurations. For example, a level may require one 3x1 ship, two 2x1 ships, and three 1x1 ships. These ships can be in any orientation (horizontal or vertical). Note that ships cannot touch each other, meaning that a ship must be completely surrounded by water tiles.&lt;/p&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+&lt;h3 id=&quot;breakpoints&quot;&gt;Breakpoints&lt;/h3&gt;
+&lt;p&gt;To start off, I added a breakpoint for all exceptions. This would allow errors to be picked up at the point at which they were thrown instead of catching the exception once it propagates all the way up the stack.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In the left panel, select the &lt;b&gt;Breakpoint Navigator&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;In the bottom left, click the ‘+’ sign&lt;/li&gt;
+  &lt;li&gt;Click &lt;b&gt;Add Exception Breakpoint&lt;/b&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;A new breakpoint should appear in the Breakpoint Navigator list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Right-click the new item, and click &lt;b&gt;Edit Breakpoint&lt;/b&gt;. Ensure that &lt;i&gt;Exception&lt;/i&gt; is set to &lt;b&gt;All&lt;/b&gt; and &lt;i&gt;Break&lt;/i&gt; is set to &lt;b&gt;On Throw&lt;/b&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;storyboard&quot;&gt;Storyboard&lt;/h3&gt;
+&lt;p&gt;I first began by constructing the skeleton of the storyboard.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In MainStoryboard.storyboard, drag a &lt;b&gt;Navigation Controller&lt;/b&gt; object onto the storyboard.&lt;/li&gt;
+  &lt;li&gt;By default, a &lt;i&gt;Table View Controller&lt;/i&gt; is attached to the Navigation Controller. Delete the Table View Controller (Click -&amp;gt; Delete) and drag a &lt;b&gt;View Controller&lt;/b&gt; onto the storyboard.&lt;/li&gt;
+  &lt;li&gt;To link the two together, right-click the Navigation Controller. Ctrl+click the circle in the &lt;i&gt;root view controller&lt;/i&gt; row, and drag to the View Controller. This establishes the View Controller as the starting point.&lt;/li&gt;
+  &lt;li&gt;Drag a &lt;b&gt;Table View Controller&lt;/b&gt; object to the storyboard. This will be used for the level selection screen.&lt;/li&gt;
+  &lt;li&gt;Drag a &lt;b&gt;Button&lt;/b&gt; object onto the first View Controller.&lt;/li&gt;
+  &lt;li&gt;Right-click the Button. Ctrl+click the circle in the &lt;i&gt;action&lt;/i&gt; row, and drag to the Table View Controller.&lt;/li&gt;
+  &lt;li&gt;In the resulting sub-menu, select Push.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;i&gt;Push&lt;/i&gt; “pushes” the next screen on top of the current. one. This will present the user twith a Back button to move back to the current screen&lt;/li&gt;
+      &lt;li&gt;&lt;i&gt;Modal&lt;/i&gt; presents another screen that isn’t “connected” to the current screen (like a pop-up)&lt;/li&gt;
+      &lt;li&gt;This &lt;a href=&quot;http://stackoverflow.com/questions/9392744/difference-between-modal-and-push-segue-in-storyboards&quot;&gt;link&lt;/a&gt; describes the differences fairly well&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Repeat this for other views&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;level-selection&quot;&gt;Level Selection&lt;/h3&gt;
+&lt;p&gt;I then started to populate the Table View Controller. This View Controller is used to populate a list of available levels in the game.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add levels.txt to the project
+    &lt;ol&gt;
+      &lt;li&gt;File -&amp;gt; Add Files to “Project”&lt;/li&gt;
+      &lt;li&gt;Select levels.txt&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;File -&amp;gt; New -&amp;gt; File -&amp;gt; iOS/Cocoa Touch -&amp;gt; &lt;b&gt;Objective-C Class&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Set Class to &lt;b&gt;LevelSelectViewController&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Set Subclass to &lt;b&gt;UITableViewController&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;b&gt;Next&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Set Destination to your application’s directory&lt;/li&gt;
+  &lt;li&gt;Click &lt;b&gt;Create&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;In the storyboard, select the Table View Controller&lt;/li&gt;
+  &lt;li&gt;Select the &lt;i&gt;Identity&lt;/i&gt; inspector in the right panel&lt;/li&gt;
+  &lt;li&gt;In the &lt;i&gt;Custom class&lt;/i&gt; section, set &lt;i&gt;Class&lt;/i&gt; to &lt;b&gt;LevelSelectViewController&lt;/b&gt;
+    &lt;ol&gt;
+      &lt;li&gt;This was the class created above. The option should be available in the drop-down menu&lt;/li&gt;
+      &lt;li&gt;This tells this View Controller to use LevelSelectViewController&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Load the levels.txt file by adding the following code in LevelSelectViewController.m (viewDidLoad is invoked once the view controller has finished loading the view)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;viewDidLoad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSBundle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mainBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;levels&quot;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ofType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileContents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringWithContentsOfFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUTF8StringEncoding&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;allLines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileContents&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;componentsSeparatedByCharactersInSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSCharacterSet&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;newlineCharacterSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allLines&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// process text file...
+&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In MainStoryboard.storyboard, select the Prototype Cell (the lone entry in the table) in the LevelSelectViewController object. In the Identity inspector, set &lt;i&gt;Restoration ID&lt;/i&gt; to some name (I picked &lt;b&gt;LevelCell&lt;/b&gt;)&lt;/p&gt;
+
+&lt;p&gt;In LevelSelectViewController.m, implement the associated UITableViewController functions (since this class subclassed UITableViewController, the associated functions were already added to the .m file)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;numberOfSectionsInTableView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Return the number of sections
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// we only have one section/group in table
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;numberOfRowsInSection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Return the number of rows in the section.
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;levels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// I stored all of the levels in an array
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cellForRowAtIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSIndexPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;indexPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// this function will be called for each row in the table
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// populate table
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;levels&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;objectAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CellIdentifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;LevelCell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// defined in StoryBoard (CustomCollectionView)
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dequeueReusableCellWithIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CellIdentifier&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// set cell label
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Board%@ (%dx%d)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;game-screen&quot;&gt;Game Screen&lt;/h3&gt;
+&lt;h4 id=&quot;storyboard-1&quot;&gt;Storyboard&lt;/h4&gt;
+&lt;p&gt;To create the game board…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Drag a Collection View object to a new view controller.&lt;/li&gt;
+  &lt;li&gt;Click the prototype cell in the Collection View (the first tile), and set an Identifier in the Attributes inspector (similar to the Level Select screen). In this case, I named it &lt;b&gt;GameTileCell&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Create a custom class for the Collection View
+    &lt;ol&gt;
+      &lt;li&gt;File -&amp;gt; New -&amp;gt; File -&amp;gt; iOS/Cocoa Touch -&amp;gt; Objective-C Class&lt;/li&gt;
+      &lt;li&gt;Set &lt;i&gt;Class&lt;/i&gt; to &lt;b&gt;CustomCollectionView&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Set &lt;i&gt;Subclass&lt;/i&gt; to &lt;b&gt;UICollectionView&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;b&gt;Next&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Set destination to your application’s directory&lt;/li&gt;
+      &lt;li&gt;Click &lt;b&gt;Create&lt;/b&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Click the Collection View object, navigate to the &lt;i&gt;Identity&lt;/i&gt; inspector, and set the &lt;i&gt;Custom Class&lt;/i&gt; to &lt;b&gt;CustomCollectionView&lt;/b&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;code&quot;&gt;Code&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#pragma mark - UICollectionViewDataSource
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;numberOfSectionsInCollectionView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Returns the total number of sections
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// only one section
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;numberOfItemsInSection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Returns the number of cells to be displayed for a given section
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tiles_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionViewCell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cv&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cellForItemAtIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSIndexPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;indexPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Returns the cell at a given index
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// cells with tag 0: informational tile
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// cells with tag 1: game tile
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//NSLog(@&quot;FOR %d&quot;, indexPath.item);
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// obtain a cell of ID &quot;GameTileCell&quot; (either new cell or one that can be reused)
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;GameTile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cv&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dequeueReusableCellWithReuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;GameTileCell&quot;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// set cell parameters...
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//NSLog(@&quot;FOR %d, %d&quot;, cell.row, cell.column);
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#pragma mark - UICollectionViewDelegateFlowLayout
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Specify size of a cell
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CGSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionViewLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;collectionViewLayout&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeForItemAtIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSIndexPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;indexPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;brain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;brain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// calculate size of cell based on collectionview size
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;CGRect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_layout&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cellsize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;brain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;CGSize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGSizeMake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cellsize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cellsize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//NSLog(@&quot;ROW: %d, COL: %d, SIZE X: %f, SIZE Y: %f&quot;,row, column, retval.width, retval.height);
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//NSLog(@&quot;WIDTH: %f HEIGHT: %f&quot;, frame.size.width, frame.size.height);
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Returns spacing between cells, headers, and footers
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIEdgeInsets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UICollectionViewLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;collectionViewLayout&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insetForSectionAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIEdgeInsetsMake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;high-scores&quot;&gt;High Scores&lt;/h3&gt;
+&lt;p&gt;I ended up using SQLite for storing high scores (an alternative would be to use Core Data, but I didn’t investigate that path enough).&lt;/p&gt;
+
+&lt;p&gt;Add the following code to load the SQL database (or create one if the database cannot be found). For my project, this code was added to the application didFinishLaunchingWithOptions function in BattleshipAppDelegate.m&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;n&quot;&gt;NSArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirPaths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSSearchPathForDirectoriesInDomains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDocumentDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSUserDomainMask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// get a list of directories that are owned by the application
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;docsDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirPaths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// assume it's in the first directory
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databasePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docsDir&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringByAppendingPathComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;scores.db&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// this is the expected path to where the database should live ('docsDir . &quot;/scores.db/')
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSFileManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filemgr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSFileManager&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;defaultManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// define filemanager. this is used to look up if a file exists or not
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// if database file doesn't exist, create it
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filemgr&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fileExistsAtPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databasePath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databasePath&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UTF8String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// convert pathname to UTF8 String
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sqlite3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// stores pointer to high scores database
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// create a database at the specified path
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sql_stmt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;CREATE TABLE IF NOT EXISTS SCORES (ID INTEGER PRIMARY KEY AUTOINCREMENT, BOARD INTEGER, MINUTES INTEGER, SECONDS INTEGER, RANK INTEGER);&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// create table in database
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sql_stmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//NSLog(@&quot;Failed to create table&quot;);
+&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;sqlite3_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Failed to open/create database&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databasePath&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;used&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here’s an example of using a SELECT statement. This was used in the High Scores View Controller to retrieve a list of levels that contained high scores.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;n&quot;&gt;BattleshipAppDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BattleshipAppDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databasePath&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UTF8String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// determined above
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// open the database
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELECT DISTINCT BOARD FROM SCORES ORDER BY ID ASC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query_stmt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UTF8String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// query database for all unique boards
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sqlite3_stmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_prepare_v2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query_stmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// if at least one row returns
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_ROW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// step through each returned row of data
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+               &lt;span class=&quot;n&quot;&gt;NSNumber&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;board_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;numberWithInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_column_int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
+               &lt;span class=&quot;c1&quot;&gt;//NSLog(@&quot;BOARD ID: %@&quot;, board_id);
+&lt;/span&gt;
+               &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boards&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;board_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_ROW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;sqlite3_finalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// release compiled statement from memory
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Failed SQL PREPARE. Error is: %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlite3_errmsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// close database connection
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sqlite3_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here’s an example of using a DELETE statement. This was used in the Settings View Controller to delete all the high scores from the database.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;n&quot;&gt;BattleshipAppDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BattleshipAppDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databasePath&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UTF8String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sqlite3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// open high scores database
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_OK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// generate command to delete all entries in database
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;DELETE FROM SCORES&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delete_stmt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UTF8String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sqlite3_stmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// execute command
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sqlite3_prepare_v2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delete_stmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// check results of execution
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlite3_step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLITE_DONE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Deleted&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Error: Deleting Score&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// release compiled statement from memory
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sqlite3_finalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// close database connection
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;sqlite3_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoresDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;settings&quot;&gt;Settings&lt;/h3&gt;
+&lt;h4 id=&quot;storyboard-2&quot;&gt;Storyboard&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Drag a new &lt;b&gt;Table View Controller&lt;/b&gt; into the storyboard&lt;/li&gt;
+  &lt;li&gt;Select the view controller and navigate to the &lt;i&gt;Attributes&lt;/i&gt; inspector&lt;/li&gt;
+  &lt;li&gt;Set &lt;i&gt;Content&lt;/i&gt; to &lt;b&gt;Static Cells&lt;/b&gt;.
+    &lt;ol&gt;
+      &lt;li&gt;This means you will define how the cells look in storyboard rather than dynamically through code (like we did in the Level Select View Controller)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Set &lt;i&gt;Sections&lt;/i&gt; to how many logical groups of settings you want. In this case, I picked &lt;b&gt;2&lt;/b&gt;.&lt;/li&gt;
+  &lt;li&gt;You can add/remove cells from each group as you see fit. If you want to add more, drag a Table View Cell object into a particular group.&lt;/li&gt;
+  &lt;li&gt;To customize a cell, drag objects (e.g. labels, switches) onto each cell.&lt;/li&gt;
+  &lt;li&gt;By default, each cell is selectable (like a button). I left this behavior on the &lt;i&gt;Reset High Scores&lt;/i&gt; option. However, I did not want this behavior on the Sound toggle option. Highlight the corresponding cell, navigate to the &lt;i&gt;Attributes&lt;/i&gt; inspector, and set &lt;i&gt;Selection&lt;/i&gt; to &lt;b&gt;None&lt;/b&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;code-1&quot;&gt;Code&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;File -&amp;gt; New -&amp;gt; File -&amp;gt; iOS/Resource -&amp;gt; &lt;b&gt;Property List&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Save As &lt;b&gt;defaults&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;b&gt;Create&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;b&gt;defaults.plist&lt;/b&gt; in &lt;i&gt;Project Navigator&lt;/i&gt;&lt;/li&gt;
+  &lt;li&gt;Right-click &lt;b&gt;Root&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;b&gt;Add Row&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Name the property (e.g. &lt;b&gt;soundEnabled&lt;/b&gt;)&lt;/li&gt;
+  &lt;li&gt;Set the property type (e.g. &lt;b&gt;Boolean&lt;/b&gt;)&lt;/li&gt;
+  &lt;li&gt;Set the default value (e.g. &lt;b&gt;YES&lt;/b&gt;)&lt;/li&gt;
+  &lt;li&gt;In BattleshipAppDelegate.m, add the following statement to load the defaults.plist file once the application has finished loading.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;application&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;didFinishLaunchingWithOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;launchOptions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//...
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;registerDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dictionaryWithContentsOfFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSBundle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mainBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;defaults&quot;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ofType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;plist&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]];&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//...
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To access these values…&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soundEnabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;boolForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;soundEnabled&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To change a value…&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setBool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;soundEnabled&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;alerts&quot;&gt;Alerts&lt;/h3&gt;
+&lt;p&gt;Alerts (pop-ups) were added to the game to confirm that a user wanted to proceed with a certain action. This was used in two places. The first was to confirm that a user wanted to reset all of the stored high scores. The second was to confirm that a user wanted to reset his/her progress on a current level.&lt;/p&gt;
+
+&lt;p&gt;To present the user with an alert, the following code was invoked after a user tapped a button&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;showAlert&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;UIAlertView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIAlertView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Reset High Score?&quot;&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Are you sure you want to reset high scores?&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// delegate set to self =&amp;gt; this view controller will get a callback - need to implement the callback (see alertView didDismissWithButtonIndex)
+&lt;/span&gt;        &lt;span class=&quot;nl&quot;&gt;cancelButtonTitle:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Cancel&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;otherButtonTitles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Yes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// could add more buttons after &quot;Yes&quot;. List of buttons ends in &quot;nil&quot;.
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alert&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// alert ID
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alert&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To react to the user’s response to the pop-up, the following function was added&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;alertView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIAlertView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alertView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;didDismissWithButtonIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;buttonIndex&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// tag set above
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alertView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// cancel
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buttonIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// OK
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buttonIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alertView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cancelButtonIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// do something
+&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;sounds&quot;&gt;Sounds&lt;/h3&gt;
+&lt;p&gt;To add sounds to the game…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;File -&amp;gt; Add Files to “Project”&lt;/li&gt;
+  &lt;li&gt;Select an mp3 file (in this case, I added ff6_victory.mp3)&lt;/li&gt;
+  &lt;li&gt;Add the following code…&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective_c&quot; data-lang=&quot;objective_c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// load sounds
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soundPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSBundle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mainBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;ff6_victory&quot;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ofType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;mp3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;NSURL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fileURLWithPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soundPath&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;AVAudioPlayer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AVAudioPlayer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithContentsOfURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prepareToPlay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soundplayers&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// all my sounds were added to this array
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// play sound
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soundplayers&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;objectAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// stop sound
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soundplayers&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;objectAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioplayer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;h3 id=&quot;storyboards&quot;&gt;Storyboards&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.techotopia.com/index.php/Using_Xcode_Storyboarding_(iPhone_iOS_5)&quot;&gt;http://www.techotopia.com/index.php/Using_Xcode_Storyboarding_(iPhone_iOS_5)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kurrytran.blogspot.com/2011/07/simple-ios-5-tutorial-using-storyboard.html&quot;&gt;http://kurrytran.blogspot.com/2011/07/simple-ios-5-tutorial-using-storyboard.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;uicollectionview&quot;&gt;UICollectionView&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.raywenderlich.com/22324/beginning-uicollectionview-in-ios-6-part-12&quot;&gt;http://www.raywenderlich.com/22324/beginning-uicollectionview-in-ios-6-part-12&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://skeuo.com/uicollectionview-custom-layout-tutorial&quot;&gt;http://skeuo.com/uicollectionview-custom-layout-tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.appcoda.com/ios-programming-uicollectionview-tutorial/&quot;&gt;http://www.appcoda.com/ios-programming-uicollectionview-tutorial/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;passing-data-between-view-controllers&quot;&gt;Passing Data Between View Controllers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5210535/passing-data-between-view-controllers&quot;&gt;http://stackoverflow.com/questions/5210535/passing-data-between-view-controllers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reading-a-text-file&quot;&gt;Reading a Text File&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/7828073/reading-a-text-file-in-objective-c&quot;&gt;http://stackoverflow.com/questions/7828073/reading-a-text-file-in-objective-c&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;nsuserdefaults&quot;&gt;NSUserDefaults&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2076816/how-to-register-user-defaults-using-nsuserdefaults-without-overwriting-existing&quot;&gt;http://stackoverflow.com/questions/2076816/how-to-register-user-defaults-using-nsuserdefaults-without-overwriting-existing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/9927094/ios-saving-high-score-locally&quot;&gt;http://stackoverflow.com/questions/9927094/ios-saving-high-score-locally&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sqlite&quot;&gt;SQLite&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.techotopia.com/index.php/An_Example_SQLite_based_iOS_6_iPhone_Application&quot;&gt;http://www.techotopia.com/index.php/An_Example_SQLite_based_iOS_6_iPhone_Application&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Code" /><category term="iOS" /><category term="Objective-C" /><summary type="html">One of my class projects was to recreate the game “Classic Battleships” (see here or here for an explanation of the rules) for iOS. For the source code, click here. Click through for more documentation.</summary></entry><entry><title type="html">Sublime Text</title><link href="http://www.mycowsworld.com/blog/2013/11/16/sublime-text.html" rel="alternate" type="text/html" title="Sublime Text" /><published>2013-11-16T00:18:00-05:00</published><updated>2013-11-16T00:18:00-05:00</updated><id>http://www.mycowsworld.com/blog/2013/11/16/sublime-text</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/11/16/sublime-text.html">&lt;p&gt;&lt;a href=&quot;http://www.sublimetext.com&quot;&gt;Sublime Text&lt;/a&gt; is an awesome text editor that is fast, has a simple interface, and can be customized to your heart’s content. The following links walk through installing some of the more popular plugins.&lt;/p&gt;
+
+&lt;h4 id=&quot;must-haves&quot;&gt;Must-haves&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sublime.wbond.net&quot;&gt;Package Control&lt;/a&gt; - A Sublime Text Package Manager. Easily installs and updates Sublime Text plugins.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/buymeasoda/soda-theme/&quot;&gt;Soda Theme&lt;/a&gt; - The Dark Theme is so tasty.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.alexmaccaw.com/sublime-text&quot;&gt;http://blog.alexmaccaw.com/sublime-text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/&quot;&gt;http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coderwall.com/p/ekwjca&quot;&gt;https://coderwall.com/p/ekwjca&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2&quot;&gt;http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Code" /><category term="Tools" /><summary type="html">Sublime Text is an awesome text editor that is fast, has a simple interface, and can be customized to your heart’s content. The following links walk through installing some of the more popular plugins. Must-haves Package Control - A Sublime Text Package Manager. Easily installs and updates Sublime Text plugins. Soda Theme - The Dark Theme is so tasty. References http://blog.alexmaccaw.com/sublime-text http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/ https://coderwall.com/p/ekwjca http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2</summary></entry><entry><title type="html">HTML Device Orientation Project</title><link href="http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth.html" rel="alternate" type="text/html" title="HTML Device Orientation Project" /><published>2013-11-12T22:50:00-05:00</published><updated>2013-11-12T22:50:00-05:00</updated><id>http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth.html">&lt;p&gt;For a class assignment, we were asked to create a project that demonstrated the usage of device orientation events. In this project, the device orientation was used to manipulate a “rolling ball” on the screen.&lt;/p&gt;
+
+&lt;p&gt;To try the demo, click &lt;a href=&quot;http://www.mycowsworld.com/code/Labyrinth&quot;&gt;here&lt;/a&gt;.  Note that the project was programmed such that it only works on a mobile device (e.g. phones, tablets).&lt;/p&gt;
+
+&lt;p&gt;For the source code, click &lt;a href=&quot;https://github.com/moduli/Labyrinth&quot;&gt;here&lt;/a&gt;. Click through for more documentation.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;After loading the demo, it will ask you to rotate your device to landscape mode. After rotating, tap the screen to begin, and you can begin tilting your device to move a “marble” around on the screen. Rotating back to portrait mode will “pause” the demo.&lt;/p&gt;
+
+&lt;p&gt;Each time you resume the demo from a paused state, it will recalibrate the center position based on how the device is held.&lt;/p&gt;
+
+&lt;p&gt;The demo can be found &lt;a href=&quot;http://www.mycowsworld.com/code/Labyrinth/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+&lt;h3 id=&quot;media-queries&quot;&gt;Media Queries&lt;/h3&gt;
+&lt;p&gt;This project used media queries to determine what kind of device is being used by the user. In CSS, different styles were applied based on the device type. For example, the first block would apply to phones, and the second block would apply to tablets. Note that if using a tablet, it would apply the phone styling first, then also apply the tablet styling on top of it.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min-device-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;320px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nf&quot;&gt;#overlaytext&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;25px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min-device-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;768px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nf&quot;&gt;#overlaytext&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In Javascript, I first checked to see if the browser supported this functionality. Then, I added some if statements to determine the device type. I used this to set certain settings that would be more “optimized” for a phone versus a tablet.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// PHONE&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'(max-device-width: 767px)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// TABLET&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'(max-device-width: 1024px)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;device-orientation-change---portraitlandscape&quot;&gt;Device Orientation Change - Portrait/Landscape&lt;/h3&gt;
+&lt;p&gt;To detect when a device changes orientation (from landscape to portrait and vice versa), I employed the use of the window.onorientationchange event. All modern mobile browsers support this event.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DeviceOrientationEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// do something...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// display text that this device does not support device orientation&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Once you have determined that the device supports orientation events, you can then receive notifications of when a device changes orientation and subsequently perform an action.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onorientationchange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;orientation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	    &lt;span class=&quot;c1&quot;&gt;// Note: The following numbers don't necessarily work on all devices&lt;/span&gt;
+	    &lt;span class=&quot;c1&quot;&gt;// See http://www.matthewgifford.com/blog/2011/12/22/a-misconception-about-window-orientation/ for more detail&lt;/span&gt;
+  		&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// landscape&lt;/span&gt;
+  		    &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
+  			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 		&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// landscape&lt;/span&gt;
+ 		    &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
+    		&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  		&lt;span class=&quot;nl&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// portrait&lt;/span&gt;
+  		    &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
+    		&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;device-orientation-change---ball-movement&quot;&gt;Device Orientation Change - Ball Movement&lt;/h3&gt;
+&lt;p&gt;In addition to receiving notifications when a device changes orientation from landscape to orientation, you can add a listener to receive notifications whenever a device changes its orientation at all.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'deviceorientation'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// event.gamma - angle of device around x axis&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// event.beta - angle of device around y axis&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// event.alpha - angle of device around z axis&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;animation&quot;&gt;Animation&lt;/h3&gt;
+&lt;p&gt;Instead of using a timer loop to create animations, there is a feature to allow the browser to notify your application when it is ready for the next frame of the animation.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// obtain a reference to the appropriate function name (this function has different names between browsers)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// if the browser does not support it, we'll fall back to using a timer loop&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reqAnimFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mozRequestAnimationFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;webkitRequestAnimationFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msRequestAnimationFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oRequestAnimationFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;requestAnimationFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          			&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        		&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;animate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// draw something here&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;reqAnimFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;animate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// call animate function again when browser is ready&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// initial animate call&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;animate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;h3 id=&quot;media-queries-1&quot;&gt;Media Queries&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html&quot;&gt;http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml&quot;&gt;http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;device-orientation&quot;&gt;Device Orientation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/device/orientation/&quot;&gt;http://www.html5rocks.com/en/tutorials/device/orientation/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.matthewgifford.com/blog/2011/12/22/a-misconception-about-window-orientation/&quot;&gt;http://www.matthewgifford.com/blog/2011/12/22/a-misconception-about-window-orientation/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;animation-1&quot;&gt;Animation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tutorials.jenkov.com/html5-canvas/animation.html&quot;&gt;http://tutorials.jenkov.com/html5-canvas/animation.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/&quot;&gt;http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Code" /><category term="HTML" /><category term="Javascript" /><category term="CSS" /><summary type="html">For a class assignment, we were asked to create a project that demonstrated the usage of device orientation events. In this project, the device orientation was used to manipulate a “rolling ball” on the screen. To try the demo, click here. Note that the project was programmed such that it only works on a mobile device (e.g. phones, tablets). For the source code, click here. Click through for more documentation.</summary></entry><entry><title type="html">Arabian Nights</title><link href="http://www.mycowsworld.com/blog/2013/09/28/arabian-nights.html" rel="alternate" type="text/html" title="Arabian Nights" /><published>2013-09-28T17:27:00-04:00</published><updated>2013-09-28T17:27:00-04:00</updated><id>http://www.mycowsworld.com/blog/2013/09/28/arabian-nights</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/09/28/arabian-nights.html">&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; title=&quot;Wedding Hall&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; alt=&quot;Wedding Hall&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; title=&quot;Wedding Hall&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Wedding Hall&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;p&gt;More pictures…&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; title=&quot;Sheikh Zayed Grand Mosque&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; alt=&quot;Sheikh Zayed Grand Mosque&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; title=&quot;Sheikh Zayed Grand Mosque&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Sheikh Zayed Grand Mosque&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; title=&quot;Desert Safari&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; alt=&quot;Desert Safari&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; title=&quot;Desert Safari&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Desert Safari&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; title=&quot;Dubai Mall Fountain&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; alt=&quot;Dubai Mall Fountain&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; title=&quot;Dubai Mall Fountain&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Dubai Mall Fountain&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; title=&quot;Ravi Restaurant&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; alt=&quot;Ravi Restaurant&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; title=&quot;Ravi Restaurant&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Ravi Restaurant&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; title=&quot;Arc de Triomphe du Carrousel&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; alt=&quot;Arc de Triomphe du Carrousel&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; title=&quot;Arc de Triomphe du Carrousel&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Arc de Triomphe du Carrousel&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; title=&quot;Notre Dame Cathedral&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; alt=&quot;Notre Dame Cathedral&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; title=&quot;Notre Dame Cathedral&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Notre Dame Cathedral&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; title=&quot;Louvre Statue&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; alt=&quot;Louvre Statue&quot; width=&quot;400&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; title=&quot;Louvre Statue&quot;   width=&quot;400&quot; /&gt;
+    &lt;figcaption&gt;Louvre Statue&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;</content><author><name></name></author><category term="Photos" /><category term="UAE" /><category term="France" /><category term="Travel" /><summary type="html">More pictures…</summary></entry><entry><title type="html">Setting Up Octopress with Amazon Web Services</title><link href="http://www.mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services.html" rel="alternate" type="text/html" title="Setting Up Octopress with Amazon Web Services" /><published>2013-08-04T16:48:00-04:00</published><updated>2013-08-04T16:48:00-04:00</updated><id>http://www.mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/08/04/setting-up-octopress-with-amazon-web-services.html">&lt;p&gt;When I initially had the idea to start a blog, I was looking up how to set up WordPress with Amazon Web Services (AWS) - the web host I decided to use. Somehow, I ended up stumbling into Jekyll, which later led me to Octopress. The post describes the steps needed to set up Octopress with AWS.&lt;/p&gt;
+
+&lt;p&gt;There are lots of posts out in the internets that describe other people’s experiences with Octopress. Here are a few…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/&quot;&gt;http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nynim.org/blog/2011/12/19/hello-octopress/&quot;&gt;http://nynim.org/blog/2011/12/19/hello-octopress/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openswitch.org/blog/why-octopress/&quot;&gt;http://openswitch.org/blog/why-octopress/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+So how do we get octopress set up with AWS?&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;step-1-install-octopress&quot;&gt;Step 1: Install Octopress&lt;/h2&gt;
+&lt;p&gt;Follow the instructions here: http://octopress.org/docs/setup/&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-install-s3_website&quot;&gt;Step 2: Install s3_website&lt;/h2&gt;
+&lt;p&gt;s3_website is a tool used to upload your octopress blog to Amazon S3 (an Amazon Web Service used for web storage). For more information on s3_website, go here: https://github.com/laurilehmijoki/s3_website&lt;/p&gt;
+
+&lt;p&gt;In the terminal, enter the following commands:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;cd &amp;lt;octopress_blog&amp;gt;
+gem install s3_website
+s3_website cfg create  # creates s3_website.yl (configuration file)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;step-3-create-user-in-aws-iam&quot;&gt;Step 3: Create User in AWS IAM&lt;/h2&gt;
+&lt;p&gt;AWS IAM (Identity and Access Management) is used to manage access to your resources in AWS. In this step, we’ll create a user in IAM that will be used by s3_website.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to https://aws.amazon.com/&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;My Account / Console&lt;/strong&gt; on the top-right of the window and select &lt;strong&gt;AWS Management Console&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Services&lt;/strong&gt; at the top-left of the window and select &lt;strong&gt;IAM&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Users&lt;/strong&gt; on the left&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create New Users&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Enter a username and click &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Expand the &lt;strong&gt;Show User Security Credentials&lt;/strong&gt; and copy the &lt;strong&gt;Access Key ID&lt;/strong&gt; and &lt;strong&gt;Secret Access Key&lt;/strong&gt;. Alternatively, you can click &lt;strong&gt;Download Credentials&lt;/strong&gt; to save a text file containing the two keys.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-4-configure-s3_website&quot;&gt;Step 4: Configure s3_website&lt;/h2&gt;
+&lt;p&gt;s3_website requires the keys that were obtained in IAM.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open &lt;octopress_blog&gt;/s3_website.yml in a text editor&lt;/octopress_blog&gt;&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;s3_id&lt;/em&gt;, enter the &lt;strong&gt;Access Key Id&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;s3_secret&lt;/em&gt;, enter the &lt;strong&gt;Secret Access Key&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Under &lt;em&gt;s3_bucket&lt;/em&gt;, enter the name of the S3 bucket (e.g. mywebsite.com)&lt;/li&gt;
+  &lt;li&gt;Save the file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-5-configure-octopress-for-s3_website&quot;&gt;Step 5: Configure Octopress for s3_website&lt;/h2&gt;
+&lt;h3 id=&quot;_configyml&quot;&gt;_config.yml&lt;/h3&gt;
+&lt;p&gt;By default, octopress will generate blog files to a directory named &lt;em&gt;public&lt;/em&gt;. s3_website currently expects these files to be in &lt;em&gt;_site&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Open &lt;octopress_blog&gt;/_config.yml and set...&lt;/octopress_blog&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;destination: _site&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;configrb&quot;&gt;config.rb&lt;/h3&gt;
+&lt;p&gt;Change compass to generate the CSS files to the new destination (_site).&lt;/p&gt;
+
+&lt;p&gt;Open &lt;octopress_blog&gt;/config.rb and set...&lt;/octopress_blog&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;css_dir = &quot;_site/stylesheets&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;support-bundle-exec-rake-preview-command&quot;&gt;Support “bundle exec rake preview” command&lt;/h3&gt;
+&lt;p&gt;Open &lt;octopress_blog&gt;/Rakefile and set...&lt;/octopress_blog&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;public_dir = &quot;_site&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Open &lt;octopress_blog&gt;/config.ru and change references of *public* to *_site*...&lt;/octopress_blog&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;...
+not_found do
+  send_file(File.join(File.dirname(__FILE__), '_site', '404.html'), {:status =&amp;gt; 404})
+end
+
+def send_sinatra_file(path, &amp;amp;missing_file_block)
+  file_path = File.join(File.dirname(__FILE__), '_site',  path)
+  file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
+  File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
+end
+...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;step-6-test-s3_website&quot;&gt;Step 6: Test s3_website&lt;/h2&gt;
+&lt;p&gt;In the terminal, enter the following commands:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;cd &amp;lt;octopress_blog&amp;gt;
+rake generate
+s3_website push  # pushes website files to s3 bucket&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check mywebsite.com to see if the changes were successful!&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://www.robertbrewitz.com/2013/04/relaunching-the-blog-with-octopress-and-amazon-s3/&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Octopress" /><category term="AWS" /><summary type="html">When I initially had the idea to start a blog, I was looking up how to set up WordPress with Amazon Web Services (AWS) - the web host I decided to use. Somehow, I ended up stumbling into Jekyll, which later led me to Octopress. The post describes the steps needed to set up Octopress with AWS. There are lots of posts out in the internets that describe other people’s experiences with Octopress. Here are a few… http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/ http://nynim.org/blog/2011/12/19/hello-octopress/ http://openswitch.org/blog/why-octopress/ So how do we get octopress set up with AWS?</summary></entry><entry><title type="html">Setting Up a GoDaddy Domain Name with Amazon Web Services</title><link href="http://www.mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services.html" rel="alternate" type="text/html" title="Setting Up a GoDaddy Domain Name with Amazon Web Services" /><published>2013-07-29T22:55:00-04:00</published><updated>2013-07-29T22:55:00-04:00</updated><id>http://www.mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services.html">&lt;p&gt;One day, I decided I wanted to start a website. So then… now what? The following post describes the steps I took to purchase a domain name and get it set up with Amazon’s web hosting services.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;step-1-register-for-a-domain-name&quot;&gt;Step 1: Register for a domain name&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&quot;http://www.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt; and purchase a domain name (e.g. mycowsworld.com)&lt;/p&gt;
+
+&lt;p&gt;This reserves a name that people will use to access your website. Now, you’ll need a place to store the files for your website.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-sign-up-for-amazon-web-services-aws&quot;&gt;Step 2: Sign up for Amazon Web Services (AWS)&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;Amazon Web Services&lt;/a&gt; and sign up for an account.&lt;/p&gt;
+
+&lt;p&gt;Amazon has some nice services for cloud computing. One of these services can be used for website hosting (Amazon S3). AWS costs are scaled based on usage (i.e. how much data you store on their servers). My current costs are about 50 cents/month to host this blog.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-setup-amazon-s3-simple-storage-service&quot;&gt;Step 3: Setup Amazon S3 (Simple Storage Service)&lt;/h2&gt;
+&lt;p&gt;Amazon S3 is an online data storage service, which is part of the AWS suite of tools. In S3, you create “buckets” that will be used to store data. Each bucket can be configured individually, such as changing who has permissions to access a particular bucket.&lt;/p&gt;
+
+&lt;p&gt;In this case, we’ll create two buckets: one for “mywebsite.com” and the other for “www.mywebsite.com”. We’ll configure it so that the content will be stored in mywebsite.com and that requests for www.mywebsite.com will be redirected to mywebsite.com.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click &lt;strong&gt;My Account / Console&lt;/strong&gt; on the top-right of the window and select &lt;strong&gt;AWS Management Console&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Services&lt;/strong&gt; at the top-left of the window and select &lt;strong&gt;S3&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Create two buckets: &lt;strong&gt;mywebsite.com&lt;/strong&gt; and &lt;strong&gt;www.mywebsite.com&lt;/strong&gt;. Follow these instructions to create a bucket (&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html&quot;&gt;http://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html&lt;/a&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;upload-files-to-the-mywebsitecom-bucket&quot;&gt;Upload files to the mywebsite.com bucket&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the &lt;strong&gt;mywebsite.com&lt;/strong&gt; bucket&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Upload&lt;/strong&gt; at the top-left of the screen&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Add Files&lt;/strong&gt; on the pop-up that appears and select the various website files. Multiple files can be selected. (If you do not have website files, you can create a test file with the following code)
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+	Hello World
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Start Upload&lt;/strong&gt; to upload the files to the bucket&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;configure-bucket-permissions-to-make-it-accessible-to-public&quot;&gt;Configure bucket permissions to make it accessible to public&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click &lt;strong&gt;Properties&lt;/strong&gt; at the top-right of the screen&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Permissions&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Edit Bucket Policy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Add the following to the text box (note: make sure you replace www.mywebsite.com with your own domain name)
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;{
+	&quot;Version&quot;:&quot;2008-10-17&quot;,
+	&quot;Statement&quot;:[{
+		&quot;Sid&quot;:&quot;AddPerm&quot;,
+		&quot;Effect&quot;:&quot;Allow&quot;,
+		&quot;Principal&quot;: {&quot;AWS&quot;: &quot;*&quot;},
+		&quot;Action&quot;:[&quot;s3:GetObject&quot;],
+		&quot;Resource&quot;:[&quot;arn:aws:s3:::mywebsite.com/*&quot;]
+	}]
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt; on the pop-up window&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt; in the *Permissions* pane&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;configure-bucket-for-website-hosting&quot;&gt;Configure bucket for website hosting&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;In the &lt;em&gt;Properties&lt;/em&gt; pane, select &lt;strong&gt;Static Website Hosting&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Enable website hosting&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;For &lt;em&gt;Index Document&lt;/em&gt;, enter in the filename that will be used as the home page for your website. Typically this is &lt;strong&gt;index.html&lt;/strong&gt; (make sure this file is uploaded to the bucket!)&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt; in the &lt;em&gt;Static Website Hosting&lt;/em&gt; pane&lt;/li&gt;
+  &lt;li&gt;To test, click the &lt;strong&gt;Endpoint URL&lt;/strong&gt; shown in the &lt;em&gt;Static Website Hosting&lt;/em&gt; pane and see if your website loads.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;redirect-wwwmywebsitecom-requests-to-mywebsitecom&quot;&gt;Redirect www.mywebsite.com requests to mywebsite.com&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Click &lt;strong&gt;All Buckets&lt;/strong&gt; on the top left of the page&lt;/li&gt;
+  &lt;li&gt;Click the &lt;strong&gt;www.mywebsite.com&lt;/strong&gt; bucket&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Properties&lt;/strong&gt; on the top-right&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Static Website Hosting&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Redirect all requests to another host name&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Type &lt;strong&gt;mywebsite.com&lt;/strong&gt; in the &lt;em&gt;Redirect all requests to&lt;/em&gt; field&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;To test, click the &lt;strong&gt;Endpoint URL&lt;/strong&gt; shown in the &lt;em&gt;Static Website Hosting&lt;/em&gt; pane and see if your website loads.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-4-setup-amazon-route-53&quot;&gt;Step 4: Setup Amazon Route 53&lt;/h2&gt;
+&lt;p&gt;Amazon Route 53 will be used to link the domain name you purchased to the buckets you just created.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click &lt;strong&gt;Services&lt;/strong&gt; at the top-left of the window and select &lt;strong&gt;Route 53&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create Hosted Zone&lt;/strong&gt; near the top of the screen&lt;/li&gt;
+  &lt;li&gt;On the right side of the screen, enter your domain name (e.g. mywebsite.com)&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create Hosted Zone&lt;/strong&gt; at the bottom of the panel (After you create a hosted zone, it should appear in the main panel with a check mark)&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Go to Record Sets&lt;/strong&gt; near the top of the screen&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;create-the-a-record&quot;&gt;Create the “A” Record&lt;/h3&gt;
+&lt;p&gt;The “A” Record will point mywebsite.com to the S3 bucket&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Change &lt;em&gt;Type&lt;/em&gt; to &lt;strong&gt;A - IPv4 address&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Change &lt;em&gt;Alias&lt;/em&gt; to &lt;strong&gt;Yes&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Alias Target&lt;/em&gt; field and select &lt;strong&gt;mywebsite.com (s3-website-*)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;create-the-cname-record&quot;&gt;Create the “CNAME” Record&lt;/h3&gt;
+&lt;p&gt;The “CNAME” Record will redirect www.mywebsite.com requests to mywebsite.com&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;Name&lt;/em&gt; field, add &lt;strong&gt;www.&lt;/strong&gt; before &lt;em&gt;mywebsite.com&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Change &lt;em&gt;Type&lt;/em&gt; to &lt;strong&gt;CNAME&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Change &lt;em&gt;Alias&lt;/em&gt; to &lt;strong&gt;No&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;In &lt;em&gt;Value&lt;/em&gt;, enter in &lt;strong&gt;mywebsite.com&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-5-configure-the-dns-provider-godaddy-to-use-amazon-route-53-name-servers&quot;&gt;Step 5: Configure the DNS provider (GoDaddy) to use Amazon Route 53 Name Servers&lt;/h2&gt;
+&lt;p&gt;As the DNS provider, you will need to tell GoDaddy to update the Domain Name Servers to point to the Amazon Name Servers.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In the Record Sets page, note the 4 addresses in the “NS” entry (e.g. ns-123.awsdns-55.net)&lt;/li&gt;
+  &lt;li&gt;Log in to GoDaddy.com&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;My Account&lt;/strong&gt; at the top of the screen&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;DOMAINS&lt;/em&gt; pane, click &lt;strong&gt;Launch&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click on the Domain Name that you want to edit&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;Nameservers&lt;/em&gt; section, select &lt;strong&gt;Set Nameservers&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;I have specific nameservers for my domains&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Set the nameservers to the ones noted in the “NS” entry in Step 5.1 (you can omit the ending period)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Tip from Kelton Manzanares: Make sure you delete the default CNAME record in Godaddy for www for your www. domain to work.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-test-your-website&quot;&gt;Step 6: Test your website&lt;/h2&gt;
+&lt;p&gt;Try entering your domain name into your web browser. Both mywebsite.com and www.mywebsite.com should work! Note that it may take some time (up to several hours) before these settings are propagated to the various servers on the internet.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-happening&quot;&gt;What is happening?&lt;/h2&gt;
+&lt;p&gt;The following image helps describe the process when a user enters an address into the web browser.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    &lt;a href=&quot;/assets/posts/2013-07-29-setting-up-a-godaddy-domain-name-with-amazon-web-services/dns_flow_chart.jpg&quot; title=&quot;&quot;&gt;
+        &lt;img src=&quot;/assets/posts/2013-07-29-setting-up-a-godaddy-domain-name-with-amazon-web-services/dns_flow_chart.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;img src=&quot;/assets/posts/2013-07-29-setting-up-a-godaddy-domain-name-with-amazon-web-services/dns_flow_chart.jpg&quot;  /&gt;
+
+--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There are 13 Root Name Servers spread across the world. These servers parse the request for the top level domain (e.g. .com, .net, etc) and pass to the appropriate server&lt;/li&gt;
+  &lt;li&gt;Authoritative Name Servers are defined in the Domain Name manager (e.g. GoDaddy.com). We defined the Name Servers to point to the ones provided by Amazon Route 53&lt;/li&gt;
+  &lt;li&gt;In Amazon Route 53, we defined the A record to return the IP address of one of the S3 buckets that was created&lt;/li&gt;
+  &lt;li&gt;DNS records have a “TTL” (time-to-live) setting which tells the ISP Name server how long it can hold a record before needing to get a new copy in case of changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;h3 id=&quot;configuring-aws-and-godaddy-settings&quot;&gt;Configuring AWS and GoDaddy settings&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html&quot;&gt;http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://steveliles.github.io/pointing_a_domain_name_to_an_amazon_s3_bucket.html&quot;&gt;http://steveliles.github.io/pointing_a_domain_name_to_an_amazon_s3_bucket.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://support.godaddy.com/groups/web-hosting/forum/topic/using-amazon-s3-with-godaddy-registered-domain/?pc_split_value=1&quot;&gt;http://support.godaddy.com/groups/web-hosting/forum/topic/using-amazon-s3-with-godaddy-registered-domain/?pc_split_value=1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dns--how-does-it-work&quot;&gt;DNS – How does it work?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mygreatname.com/how-dns-works/e-04-how-dns-works.htm&quot;&gt;http://www.mygreatname.com/how-dns-works/e-04-how-dns-works.htm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://dyn.com/blog/dns-why-its-important-how-it-works/&quot;&gt;http://dyn.com/blog/dns-why-its-important-how-it-works/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Website" /><category term="AWS" /><summary type="html">One day, I decided I wanted to start a website. So then… now what? The following post describes the steps I took to purchase a domain name and get it set up with Amazon’s web hosting services.</summary></entry></feed>
