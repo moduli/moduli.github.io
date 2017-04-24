@@ -867,6 +867,10 @@ footer {
 
   footer a {
     /*display: block;*/ } }
+
+    #mobile-menu h1 {
+      font-size: 23px;
+    }
 @media print {
   body {
     padding: 0.4in;
