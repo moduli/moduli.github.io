@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.mycowsworld.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.mycowsworld.com/" rel="alternate" type="text/html" /><updated>2017-04-23T22:52:53-04:00</updated><id>http://www.mycowsworld.com/</id><title type="html">Mycow’s World</title><subtitle>Hi, I'm Michael Li. Welcome to my world.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.mycowsworld.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.mycowsworld.com/" rel="alternate" type="text/html" /><updated>2017-04-24T23:59:26-04:00</updated><id>http://www.mycowsworld.com/</id><title type="html">Mycow’s World</title><subtitle>Hi, I'm Michael Li. Welcome to my world.
 </subtitle><entry><title type="html">Setting Up a GoDaddy Domain Name with GitHub</title><link href="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html" rel="alternate" type="text/html" title="Setting Up a GoDaddy Domain Name with GitHub" /><published>2015-07-12T15:30:00-04:00</published><updated>2015-07-12T15:30:00-04:00</updated><id>http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html">&lt;p&gt;I wanted to try using GitHub’s &lt;a href=&quot;https://pages.github.com&quot;&gt;Pages&lt;/a&gt; feature to host my website. Turns out it was very simple to do, and the best part is it’s free!&lt;/p&gt;
 
 &lt;p&gt;Here’s a tutorial for setting up a GoDaddy domain name with this feature.&lt;/p&gt;
@@ -157,13 +157,13 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot; title=&quot;&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot; alt=&quot;&quot; width=&quot;300&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot; alt=&quot;&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
-&lt;img src=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot;   width=&quot;300&quot; /&gt;
+&lt;img src=&quot;/assets/posts/2013-12-31-paint-ios/paint_main.png&quot;  /&gt;
 
 --&gt;
 
@@ -184,13 +184,13 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot; title=&quot;&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot; alt=&quot;&quot; width=&quot;300&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot; alt=&quot;&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
-&lt;img src=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot;   width=&quot;300&quot; /&gt;
+&lt;img src=&quot;/assets/posts/2013-12-16-classic-battleships-ios/battleship_game.png&quot;  /&gt;
 
 --&gt;
 
@@ -626,9 +626,7 @@
   &lt;li&gt;&lt;a href=&quot;http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/&quot;&gt;http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coderwall.com/p/ekwjca&quot;&gt;https://coderwall.com/p/ekwjca&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2&quot;&gt;http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Code" /><category term="Tools" /><summary type="html">Sublime Text is an awesome text editor that is fast, has a simple interface, and can be customized to your heart’s content. The following links walk through installing some of the more popular plugins. Must-haves Package Control - A Sublime Text Package Manager. Easily installs and updates Sublime Text plugins. Soda Theme - The Dark Theme is so tasty. References http://blog.alexmaccaw.com/sublime-text http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/ https://coderwall.com/p/ekwjca http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2</summary></entry><entry><title type="html">HTML Device Orientation Project</title><link href="http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth.html" rel="alternate" type="text/html" title="HTML Device Orientation Project" /><published>2013-11-12T22:50:00-05:00</published><updated>2013-11-12T22:50:00-05:00</updated><id>http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth.html">&lt;p&gt;For a class assignment, we were asked to create a project that demonstrated the usage of device orientation events. In this project, the device orientation was used to manipulate a “rolling ball” on the screen.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Code" /><category term="Tools" /><summary type="html">Sublime Text is an awesome text editor that is fast, has a simple interface, and can be customized to your heart’s content. The following links walk through installing some of the more popular plugins. Must-haves Package Control - A Sublime Text Package Manager. Easily installs and updates Sublime Text plugins. Soda Theme - The Dark Theme is so tasty. References http://blog.alexmaccaw.com/sublime-text http://blog.generalassemb.ly/sublime-text-3-tips-tricks-shortcuts/ https://coderwall.com/p/ekwjca http://www.slant.co/topics/197/~what-are-your-favorite-plugins-for-sublime-text-2</summary></entry><entry><title type="html">HTML Device Orientation Project</title><link href="http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth.html" rel="alternate" type="text/html" title="HTML Device Orientation Project" /><published>2013-11-12T22:50:00-05:00</published><updated>2013-11-12T22:50:00-05:00</updated><id>http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/11/12/coding-project-added-labyrinth.html">&lt;p&gt;For a class assignment, we were asked to create a project that demonstrated the usage of device orientation events. In this project, the device orientation was used to manipulate a “rolling ball” on the screen.&lt;/p&gt;
 
 &lt;p&gt;To try the demo, click &lt;a href=&quot;http://www.mycowsworld.com/code/Labyrinth&quot;&gt;here&lt;/a&gt;.  Note that the project was programmed such that it only works on a mobile device (e.g. phones, tablets).&lt;/p&gt;
 
@@ -769,14 +767,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; title=&quot;Sheikh Zayed Grand Mosque&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; alt=&quot;Sheikh Zayed Grand Mosque&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; alt=&quot;Sheikh Zayed Grand Mosque&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; title=&quot;Sheikh Zayed Grand Mosque&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance002.jpg&quot; title=&quot;Sheikh Zayed Grand Mosque&quot;  /&gt;
     &lt;figcaption&gt;Sheikh Zayed Grand Mosque&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -784,14 +782,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; title=&quot;Desert Safari&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; alt=&quot;Desert Safari&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; alt=&quot;Desert Safari&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; title=&quot;Desert Safari&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance004.jpg&quot; title=&quot;Desert Safari&quot;  /&gt;
     &lt;figcaption&gt;Desert Safari&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -799,14 +797,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; title=&quot;Dubai Mall Fountain&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; alt=&quot;Dubai Mall Fountain&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; alt=&quot;Dubai Mall Fountain&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; title=&quot;Dubai Mall Fountain&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance005.jpg&quot; title=&quot;Dubai Mall Fountain&quot;  /&gt;
     &lt;figcaption&gt;Dubai Mall Fountain&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -814,14 +812,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; title=&quot;Ravi Restaurant&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; alt=&quot;Ravi Restaurant&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; alt=&quot;Ravi Restaurant&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; title=&quot;Ravi Restaurant&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance003.jpg&quot; title=&quot;Ravi Restaurant&quot;  /&gt;
     &lt;figcaption&gt;Ravi Restaurant&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -829,14 +827,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; title=&quot;Arc de Triomphe du Carrousel&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; alt=&quot;Arc de Triomphe du Carrousel&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; alt=&quot;Arc de Triomphe du Carrousel&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; title=&quot;Arc de Triomphe du Carrousel&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance008.jpg&quot; title=&quot;Arc de Triomphe du Carrousel&quot;  /&gt;
     &lt;figcaption&gt;Arc de Triomphe du Carrousel&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -844,14 +842,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; title=&quot;Notre Dame Cathedral&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; alt=&quot;Notre Dame Cathedral&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; alt=&quot;Notre Dame Cathedral&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; title=&quot;Notre Dame Cathedral&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance006.jpg&quot; title=&quot;Notre Dame Cathedral&quot;  /&gt;
     &lt;figcaption&gt;Notre Dame Cathedral&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -859,14 +857,14 @@
 
 &lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; title=&quot;Louvre Statue&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; alt=&quot;Louvre Statue&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; alt=&quot;Louvre Statue&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; title=&quot;Louvre Statue&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance007.jpg&quot; title=&quot;Louvre Statue&quot;  /&gt;
     &lt;figcaption&gt;Louvre Statue&lt;/figcaption&gt;
 &lt;/figure&gt;
 
