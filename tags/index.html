@@ -105,6 +105,8 @@
 
 <a href="#javascript"> Javascript </a>
 
+<a href="#node"> Node </a>
+
 <a href="#objective-c"> Objective-C </a>
 
 <a href="#octopress"> Octopress </a>
@@ -129,6 +131,8 @@
 
 <h2 id="aws">AWS</h2>
 <ul>
+ 
+	 
  
 	 
  
@@ -200,6 +204,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/11/12/coding-project-added-labyrinth.html">
@@ -229,6 +235,8 @@
 
 <h2 id="code">Code</h2>
 <ul>
+ 
+	 
  
 	 
  
@@ -338,6 +346,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2014/04/27/building-a-computer.html">
@@ -387,6 +397,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/09/28/arabian-nights.html">
@@ -414,6 +426,8 @@
 
 <h2 id="github">Github</h2>
 <ul>
+ 
+	 
  
 	 
 	 <li>
@@ -469,6 +483,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/11/12/coding-project-added-labyrinth.html">
@@ -498,6 +514,8 @@
 
 <h2 id="hackathon">Hackathon</h2>
 <ul>
+ 
+	 
  
 	 
  
@@ -539,6 +557,24 @@
 <ul>
  
 	 
+	 <li>
+	 <h3>
+	 <a href="/blog/2017/04/26/dominion-nodejs.html">
+	 Dominion (A Node.js Project)
+	 <small>26 Apr 2017</small>
+	 </a>
+	 
+		 <a class="tag" href="/blog/tag/#tutorial">Tutorial</a>
+	 
+		 <a class="tag" href="/blog/tag/#javascript">Javascript</a>
+	 
+		 <a class="tag" href="/blog/tag/#node">Node</a>
+	 
+	 </h3>
+	 </li>
+	 
+ 
+	 
  
 	 
  
@@ -578,8 +614,53 @@
  
 </ul>
 
+<h2 id="node">Node</h2>
+<ul>
+ 
+	 
+	 <li>
+	 <h3>
+	 <a href="/blog/2017/04/26/dominion-nodejs.html">
+	 Dominion (A Node.js Project)
+	 <small>26 Apr 2017</small>
+	 </a>
+	 
+		 <a class="tag" href="/blog/tag/#tutorial">Tutorial</a>
+	 
+		 <a class="tag" href="/blog/tag/#javascript">Javascript</a>
+	 
+		 <a class="tag" href="/blog/tag/#node">Node</a>
+	 
+	 </h3>
+	 </li>
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+	 
+ 
+</ul>
+
 <h2 id="objective-c">Objective-C</h2>
 <ul>
+ 
+	 
  
 	 
  
@@ -655,6 +736,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/08/04/setting-up-octopress-with-amazon-web-services.html">
@@ -678,6 +761,8 @@
 
 <h2 id="photos">Photos</h2>
 <ul>
+ 
+	 
  
 	 
  
@@ -747,6 +832,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/11/16/sublime-text.html">
@@ -790,6 +877,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/09/28/arabian-nights.html">
@@ -817,6 +906,24 @@
 
 <h2 id="tutorial">Tutorial</h2>
 <ul>
+ 
+	 
+	 <li>
+	 <h3>
+	 <a href="/blog/2017/04/26/dominion-nodejs.html">
+	 Dominion (A Node.js Project)
+	 <small>26 Apr 2017</small>
+	 </a>
+	 
+		 <a class="tag" href="/blog/tag/#tutorial">Tutorial</a>
+	 
+		 <a class="tag" href="/blog/tag/#javascript">Javascript</a>
+	 
+		 <a class="tag" href="/blog/tag/#node">Node</a>
+	 
+	 </h3>
+	 </li>
+	 
  
 	 
 	 <li>
@@ -906,6 +1013,8 @@
 	 
  
 	 
+ 
+	 
 	 <li>
 	 <h3>
 	 <a href="/blog/2013/09/28/arabian-nights.html">
@@ -933,6 +1042,8 @@
 
 <h2 id="website">Website</h2>
 <ul>
+ 
+	 
  
 	 
 	 <li>
@@ -990,6 +1101,8 @@
 
 <h2 id="ios">iOS</h2>
 <ul>
+ 
+	 
  
 	 
  
@@ -1057,12 +1170,41 @@
 
 
         <script type="text/javascript">
+            // -----------------
+            // Mobile Menu
+            // -----------------
             $( ".menu" ).hide();
             $( ".hamburger" ).click(function() {
                 $( ".menu" ).slideToggle( "slow", function() {
                 });
             });
+
+            // -----------------
+            // Remove :hover from CSS on touch devices
+            // http://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+            // -----------------
+            var touch = 'ontouchstart' in document.documentElement
+            || navigator.maxTouchPoints > 0
+            || navigator.msMaxTouchPoints > 0;
+
+            if (touch) { // remove all :hover stylesheets
+                try { // prevent exception on browsers not supporting DOM styleSheets properly
+                    for (var si in document.styleSheets) {
+                        var styleSheet = document.styleSheets[si];
+                        if (!styleSheet.rules) continue;
+
+                        for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                            if (!styleSheet.rules[ri].selectorText) continue;
+
+                            if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                                styleSheet.deleteRule(ri);
+                            }
+                        }
+                    }
+                } catch (ex) {}
+            }
         </script>
+
         <!--[if !IE]><script>fixScale(document);</script><![endif]-->
         
     </body>

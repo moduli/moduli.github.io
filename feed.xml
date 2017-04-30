@@ -1,5 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.mycowsworld.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.mycowsworld.com/" rel="alternate" type="text/html" /><updated>2017-04-24T23:59:26-04:00</updated><id>http://www.mycowsworld.com/</id><title type="html">Mycow’s World</title><subtitle>Hi, I'm Michael Li. Welcome to my world.
-</subtitle><entry><title type="html">Setting Up a GoDaddy Domain Name with GitHub</title><link href="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html" rel="alternate" type="text/html" title="Setting Up a GoDaddy Domain Name with GitHub" /><published>2015-07-12T15:30:00-04:00</published><updated>2015-07-12T15:30:00-04:00</updated><id>http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html">&lt;p&gt;I wanted to try using GitHub’s &lt;a href=&quot;https://pages.github.com&quot;&gt;Pages&lt;/a&gt; feature to host my website. Turns out it was very simple to do, and the best part is it’s free!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.mycowsworld.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.mycowsworld.com/" rel="alternate" type="text/html" /><updated>2017-04-30T17:07:34-04:00</updated><id>http://www.mycowsworld.com/</id><title type="html">Mycow’s World</title><subtitle>Hi, I'm Michael Li. Welcome to my world.
+</subtitle><entry><title type="html">Dominion (A Node.js Project)</title><link href="http://www.mycowsworld.com/blog/2017/04/26/dominion-nodejs.html" rel="alternate" type="text/html" title="Dominion (A Node.js Project)" /><published>2017-04-26T00:00:00-04:00</published><updated>2017-04-26T00:00:00-04:00</updated><id>http://www.mycowsworld.com/blog/2017/04/26/dominion-nodejs</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2017/04/26/dominion-nodejs.html">&lt;p&gt;A few years ago, my friends and I got really into the card game &lt;a href=&quot;http://riograndegames.com/Game/278-Dominion&quot;&gt;Dominion&lt;/a&gt;. It’s a deck building game, but what made this game more enjoyable was the variation. In each round, you randomly select 10 cards that will be available for purchase, and the goal is to try to figure out different strategies for how those cards can interact with each other. The game is available on &lt;a href=&quot;https://www.amazon.com/Rio-Grande-Games-RGG370-Dominion/dp/B001JQY6K4/ref=sr_1_2?s=toys-and-games&amp;amp;ie=UTF8&amp;amp;qid=1493409679&amp;amp;sr=1-2&amp;amp;keywords=dominion&quot;&gt;Amazon&lt;/a&gt; and is playable online via the official &lt;a href=&quot;https://dominion.games&quot;&gt;Dominion Online&lt;/a&gt; site.&lt;/p&gt;
+
+&lt;p&gt;As a programming exercise, we attempted to create a similar game using Node.js. This post is to help me document the process we took to set up this project.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;step-1-install-nodejs&quot;&gt;Step 1: Install Node.js&lt;/h2&gt;
+&lt;p&gt;Node.js is a runtime, or a program, that executes Javascript code on a server, thus allowing users to program server-side code using Javascript. For a good description of Node.js, check out this &lt;a href=&quot;https://openclassrooms.com/courses/ultra-fast-applications-using-node-js/node-js-what-is-it-for-exactly&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Download and install &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;. The installer installs the Node.js and &lt;a href=&quot;https://www.npmjs.com&quot;&gt;npm&lt;/a&gt;, a package manager for Javascript that allows you to quickly install libraries and other components.&lt;/li&gt;
+  &lt;li&gt;Next, two libraries will be installed to help set up a server. &lt;a href=&quot;http://expressjs.com&quot;&gt;express&lt;/a&gt; is used to easily instantiate the server, and &lt;a href=&quot;https://socket.io&quot;&gt;socket.io&lt;/a&gt; is used for communication between server and client. To install, enter the following lines in a terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;$ npm install express
+$ npm install socket.io&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;step-2-set-up-server-code&quot;&gt;Step 2: Set up Server Code&lt;/h2&gt;
+&lt;p&gt;Create a .js file for your server code (e.g. server.js). The following code sets up an initial server that runs on port 8081.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;express&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;socket.io&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;public&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Setting static folder to 'public' (relative to server.js)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8081&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;For demonstration purposes, add a html file (index.html) to a folder named public. The file structure looks like this.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;my_dir/server.js&lt;/li&gt;
+  &lt;li&gt;my_dir/public/index.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hello World!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;    
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, start the server… (use Ctrl+C to stop the server)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;$ node server.js&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and access your file from your web browser with the following URL: &lt;a href=&quot;http://127.0.0.1:8081&quot;&gt;http://127.0.0.1:8081&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-server-message-handling&quot;&gt;Step 3: Server Message Handling&lt;/h2&gt;
+&lt;p&gt;Then, this code is used to set up message handling on the server side&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sockets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;connection&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// send a message to the client&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sockets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;message_name&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// handler for message from client&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;message_name&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// do stuff here&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// add more handlers...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;step-4-client-message-handling&quot;&gt;Step 4: Client Message Handling&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/socket.io/socket.io.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Add that to your client html page. This is served from your node server, which is available after installing socket.io.&lt;/p&gt;
+
+&lt;p&gt;In a corresponding client.js file, the following code can be used to handle client messaging.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// send a message to the server&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;message_name&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// handler for message from server&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;message_name&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;step-5-serve-page&quot;&gt;Step 5: Serve Page&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Log in to your router&lt;/li&gt;
+  &lt;li&gt;Find the Port Forwarding Options&lt;/li&gt;
+  &lt;li&gt;Add a new Port Forwarding Rule… HOST DEVICE, HTTP (Web - Port 80), Forwarding to Port 8081&lt;/li&gt;
+  &lt;li&gt;Find the Router’s IP Address (usually somewhere on the main router page)&lt;/li&gt;
+  &lt;li&gt;Give out &lt;Router IP=&quot;&quot; Address=&quot;&quot;&gt;:80 to others&lt;/Router&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;h4 id=&quot;nodejs&quot;&gt;Node.js&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openclassrooms.com/courses/ultra-fast-applications-using-node-js/node-js-what-is-it-for-exactly&quot;&gt;https://openclassrooms.com/courses/ultra-fast-applications-using-node-js/node-js-what-is-it-for-exactly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1884724/what-is-node-js&quot;&gt;http://stackoverflow.com/questions/1884724/what-is-node-js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.programwitherik.com/getting-started-with-socket-io-node-js-and-express/&quot;&gt;http://www.programwitherik.com/getting-started-with-socket-io-node-js-and-express/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Javascript" /><category term="Node" /><summary type="html">A few years ago, my friends and I got really into the card game Dominion. It’s a deck building game, but what made this game more enjoyable was the variation. In each round, you randomly select 10 cards that will be available for purchase, and the goal is to try to figure out different strategies for how those cards can interact with each other. The game is available on Amazon and is playable online via the official Dominion Online site. As a programming exercise, we attempted to create a similar game using Node.js. This post is to help me document the process we took to set up this project.</summary></entry><entry><title type="html">Setting Up a GoDaddy Domain Name with GitHub</title><link href="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html" rel="alternate" type="text/html" title="Setting Up a GoDaddy Domain Name with GitHub" /><published>2015-07-12T15:30:00-04:00</published><updated>2015-07-12T15:30:00-04:00</updated><id>http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2015/07/12/setting-up-a-godaddy-domain-name-with-github.html">&lt;p&gt;I wanted to try using GitHub’s &lt;a href=&quot;https://pages.github.com&quot;&gt;Pages&lt;/a&gt; feature to host my website. Turns out it was very simple to do, and the best part is it’s free!&lt;/p&gt;
 
 &lt;p&gt;Here’s a tutorial for setting up a GoDaddy domain name with this feature.&lt;/p&gt;
 
@@ -748,14 +843,14 @@
   &lt;li&gt;&lt;a href=&quot;http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/&quot;&gt;http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Code" /><category term="HTML" /><category term="Javascript" /><category term="CSS" /><summary type="html">For a class assignment, we were asked to create a project that demonstrated the usage of device orientation events. In this project, the device orientation was used to manipulate a “rolling ball” on the screen. To try the demo, click here. Note that the project was programmed such that it only works on a mobile device (e.g. phones, tablets). For the source code, click here. Click through for more documentation.</summary></entry><entry><title type="html">Arabian Nights</title><link href="http://www.mycowsworld.com/blog/2013/09/28/arabian-nights.html" rel="alternate" type="text/html" title="Arabian Nights" /><published>2013-09-28T17:27:00-04:00</published><updated>2013-09-28T17:27:00-04:00</updated><id>http://www.mycowsworld.com/blog/2013/09/28/arabian-nights</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/09/28/arabian-nights.html">&lt;div class=&quot;image-wrapper&quot;&gt;
     &lt;a href=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; title=&quot;Wedding Hall&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; alt=&quot;Wedding Hall&quot; width=&quot;400&quot; /&gt;
+        &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; alt=&quot;Wedding Hall&quot; /&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!--
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; title=&quot;Wedding Hall&quot;   width=&quot;400&quot; /&gt;
+    &lt;img src=&quot;/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg&quot; title=&quot;Wedding Hall&quot;  /&gt;
     &lt;figcaption&gt;Wedding Hall&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -964,174 +1059,4 @@ s3_website push  # pushes website files to s3 bucket&lt;/code&gt;&lt;/pre&gt;&lt
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;http://www.robertbrewitz.com/2013/04/relaunching-the-blog-with-octopress-and-amazon-s3/&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Octopress" /><category term="AWS" /><summary type="html">When I initially had the idea to start a blog, I was looking up how to set up WordPress with Amazon Web Services (AWS) - the web host I decided to use. Somehow, I ended up stumbling into Jekyll, which later led me to Octopress. The post describes the steps needed to set up Octopress with AWS. There are lots of posts out in the internets that describe other people’s experiences with Octopress. Here are a few… http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/ http://nynim.org/blog/2011/12/19/hello-octopress/ http://openswitch.org/blog/why-octopress/ So how do we get octopress set up with AWS?</summary></entry><entry><title type="html">Setting Up a GoDaddy Domain Name with Amazon Web Services</title><link href="http://www.mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services.html" rel="alternate" type="text/html" title="Setting Up a GoDaddy Domain Name with Amazon Web Services" /><published>2013-07-29T22:55:00-04:00</published><updated>2013-07-29T22:55:00-04:00</updated><id>http://www.mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services</id><content type="html" xml:base="http://www.mycowsworld.com/blog/2013/07/29/setting-up-a-godaddy-domain-name-with-amazon-web-services.html">&lt;p&gt;One day, I decided I wanted to start a website. So then… now what? The following post describes the steps I took to purchase a domain name and get it set up with Amazon’s web hosting services.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;step-1-register-for-a-domain-name&quot;&gt;Step 1: Register for a domain name&lt;/h2&gt;
-&lt;p&gt;Go to &lt;a href=&quot;http://www.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt; and purchase a domain name (e.g. mycowsworld.com)&lt;/p&gt;
-
-&lt;p&gt;This reserves a name that people will use to access your website. Now, you’ll need a place to store the files for your website.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-2-sign-up-for-amazon-web-services-aws&quot;&gt;Step 2: Sign up for Amazon Web Services (AWS)&lt;/h2&gt;
-&lt;p&gt;Go to &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;Amazon Web Services&lt;/a&gt; and sign up for an account.&lt;/p&gt;
-
-&lt;p&gt;Amazon has some nice services for cloud computing. One of these services can be used for website hosting (Amazon S3). AWS costs are scaled based on usage (i.e. how much data you store on their servers). My current costs are about 50 cents/month to host this blog.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-3-setup-amazon-s3-simple-storage-service&quot;&gt;Step 3: Setup Amazon S3 (Simple Storage Service)&lt;/h2&gt;
-&lt;p&gt;Amazon S3 is an online data storage service, which is part of the AWS suite of tools. In S3, you create “buckets” that will be used to store data. Each bucket can be configured individually, such as changing who has permissions to access a particular bucket.&lt;/p&gt;
-
-&lt;p&gt;In this case, we’ll create two buckets: one for “mywebsite.com” and the other for “www.mywebsite.com”. We’ll configure it so that the content will be stored in mywebsite.com and that requests for www.mywebsite.com will be redirected to mywebsite.com.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Click &lt;strong&gt;My Account / Console&lt;/strong&gt; on the top-right of the window and select &lt;strong&gt;AWS Management Console&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Services&lt;/strong&gt; at the top-left of the window and select &lt;strong&gt;S3&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Create two buckets: &lt;strong&gt;mywebsite.com&lt;/strong&gt; and &lt;strong&gt;www.mywebsite.com&lt;/strong&gt;. Follow these instructions to create a bucket (&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html&quot;&gt;http://docs.aws.amazon.com/AmazonS3/latest/UG/CreatingaBucket.html&lt;/a&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;upload-files-to-the-mywebsitecom-bucket&quot;&gt;Upload files to the mywebsite.com bucket&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Click the &lt;strong&gt;mywebsite.com&lt;/strong&gt; bucket&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Upload&lt;/strong&gt; at the top-left of the screen&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Add Files&lt;/strong&gt; on the pop-up that appears and select the various website files. Multiple files can be selected. (If you do not have website files, you can create a test file with the following code)
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-	Hello World
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Start Upload&lt;/strong&gt; to upload the files to the bucket&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;configure-bucket-permissions-to-make-it-accessible-to-public&quot;&gt;Configure bucket permissions to make it accessible to public&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Click &lt;strong&gt;Properties&lt;/strong&gt; at the top-right of the screen&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Permissions&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Edit Bucket Policy&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Add the following to the text box (note: make sure you replace www.mywebsite.com with your own domain name)
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-none&quot; data-lang=&quot;none&quot;&gt;{
-	&quot;Version&quot;:&quot;2008-10-17&quot;,
-	&quot;Statement&quot;:[{
-		&quot;Sid&quot;:&quot;AddPerm&quot;,
-		&quot;Effect&quot;:&quot;Allow&quot;,
-		&quot;Principal&quot;: {&quot;AWS&quot;: &quot;*&quot;},
-		&quot;Action&quot;:[&quot;s3:GetObject&quot;],
-		&quot;Resource&quot;:[&quot;arn:aws:s3:::mywebsite.com/*&quot;]
-	}]
-}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt; on the pop-up window&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt; in the *Permissions* pane&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;configure-bucket-for-website-hosting&quot;&gt;Configure bucket for website hosting&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;In the &lt;em&gt;Properties&lt;/em&gt; pane, select &lt;strong&gt;Static Website Hosting&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Select &lt;strong&gt;Enable website hosting&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;For &lt;em&gt;Index Document&lt;/em&gt;, enter in the filename that will be used as the home page for your website. Typically this is &lt;strong&gt;index.html&lt;/strong&gt; (make sure this file is uploaded to the bucket!)&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt; in the &lt;em&gt;Static Website Hosting&lt;/em&gt; pane&lt;/li&gt;
-  &lt;li&gt;To test, click the &lt;strong&gt;Endpoint URL&lt;/strong&gt; shown in the &lt;em&gt;Static Website Hosting&lt;/em&gt; pane and see if your website loads.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;redirect-wwwmywebsitecom-requests-to-mywebsitecom&quot;&gt;Redirect www.mywebsite.com requests to mywebsite.com&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Click &lt;strong&gt;All Buckets&lt;/strong&gt; on the top left of the page&lt;/li&gt;
-  &lt;li&gt;Click the &lt;strong&gt;www.mywebsite.com&lt;/strong&gt; bucket&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Properties&lt;/strong&gt; on the top-right&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Static Website Hosting&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Select &lt;strong&gt;Redirect all requests to another host name&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Type &lt;strong&gt;mywebsite.com&lt;/strong&gt; in the &lt;em&gt;Redirect all requests to&lt;/em&gt; field&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;To test, click the &lt;strong&gt;Endpoint URL&lt;/strong&gt; shown in the &lt;em&gt;Static Website Hosting&lt;/em&gt; pane and see if your website loads.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;step-4-setup-amazon-route-53&quot;&gt;Step 4: Setup Amazon Route 53&lt;/h2&gt;
-&lt;p&gt;Amazon Route 53 will be used to link the domain name you purchased to the buckets you just created.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Click &lt;strong&gt;Services&lt;/strong&gt; at the top-left of the window and select &lt;strong&gt;Route 53&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Create Hosted Zone&lt;/strong&gt; near the top of the screen&lt;/li&gt;
-  &lt;li&gt;On the right side of the screen, enter your domain name (e.g. mywebsite.com)&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Create Hosted Zone&lt;/strong&gt; at the bottom of the panel (After you create a hosted zone, it should appear in the main panel with a check mark)&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Go to Record Sets&lt;/strong&gt; near the top of the screen&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;create-the-a-record&quot;&gt;Create the “A” Record&lt;/h3&gt;
-&lt;p&gt;The “A” Record will point mywebsite.com to the S3 bucket&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Change &lt;em&gt;Type&lt;/em&gt; to &lt;strong&gt;A - IPv4 address&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Change &lt;em&gt;Alias&lt;/em&gt; to &lt;strong&gt;Yes&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Click the &lt;em&gt;Alias Target&lt;/em&gt; field and select &lt;strong&gt;mywebsite.com (s3-website-*)&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;create-the-cname-record&quot;&gt;Create the “CNAME” Record&lt;/h3&gt;
-&lt;p&gt;The “CNAME” Record will redirect www.mywebsite.com requests to mywebsite.com&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;In the &lt;em&gt;Name&lt;/em&gt; field, add &lt;strong&gt;www.&lt;/strong&gt; before &lt;em&gt;mywebsite.com&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Change &lt;em&gt;Type&lt;/em&gt; to &lt;strong&gt;CNAME&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Change &lt;em&gt;Alias&lt;/em&gt; to &lt;strong&gt;No&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;In &lt;em&gt;Value&lt;/em&gt;, enter in &lt;strong&gt;mywebsite.com&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Create Record Set&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;step-5-configure-the-dns-provider-godaddy-to-use-amazon-route-53-name-servers&quot;&gt;Step 5: Configure the DNS provider (GoDaddy) to use Amazon Route 53 Name Servers&lt;/h2&gt;
-&lt;p&gt;As the DNS provider, you will need to tell GoDaddy to update the Domain Name Servers to point to the Amazon Name Servers.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;In the Record Sets page, note the 4 addresses in the “NS” entry (e.g. ns-123.awsdns-55.net)&lt;/li&gt;
-  &lt;li&gt;Log in to GoDaddy.com&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;My Account&lt;/strong&gt; at the top of the screen&lt;/li&gt;
-  &lt;li&gt;In the &lt;em&gt;DOMAINS&lt;/em&gt; pane, click &lt;strong&gt;Launch&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Click on the Domain Name that you want to edit&lt;/li&gt;
-  &lt;li&gt;In the &lt;em&gt;Nameservers&lt;/em&gt; section, select &lt;strong&gt;Set Nameservers&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Select &lt;strong&gt;I have specific nameservers for my domains&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Set the nameservers to the ones noted in the “NS” entry in Step 5.1 (you can omit the ending period)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Tip from Kelton Manzanares: Make sure you delete the default CNAME record in Godaddy for www for your www. domain to work.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-6-test-your-website&quot;&gt;Step 6: Test your website&lt;/h2&gt;
-&lt;p&gt;Try entering your domain name into your web browser. Both mywebsite.com and www.mywebsite.com should work! Note that it may take some time (up to several hours) before these settings are propagated to the various servers on the internet.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-happening&quot;&gt;What is happening?&lt;/h2&gt;
-&lt;p&gt;The following image helps describe the process when a user enters an address into the web browser.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrapper&quot;&gt;
-    &lt;a href=&quot;/assets/posts/2013-07-29-setting-up-a-godaddy-domain-name-with-amazon-web-services/dns_flow_chart.jpg&quot; title=&quot;&quot;&gt;
-        &lt;img src=&quot;/assets/posts/2013-07-29-setting-up-a-godaddy-domain-name-with-amazon-web-services/dns_flow_chart.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;!--
-
-&lt;img src=&quot;/assets/posts/2013-07-29-setting-up-a-godaddy-domain-name-with-amazon-web-services/dns_flow_chart.jpg&quot;  /&gt;
-
---&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There are 13 Root Name Servers spread across the world. These servers parse the request for the top level domain (e.g. .com, .net, etc) and pass to the appropriate server&lt;/li&gt;
-  &lt;li&gt;Authoritative Name Servers are defined in the Domain Name manager (e.g. GoDaddy.com). We defined the Name Servers to point to the ones provided by Amazon Route 53&lt;/li&gt;
-  &lt;li&gt;In Amazon Route 53, we defined the A record to return the IP address of one of the S3 buckets that was created&lt;/li&gt;
-  &lt;li&gt;DNS records have a “TTL” (time-to-live) setting which tells the ISP Name server how long it can hold a record before needing to get a new copy in case of changes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-&lt;h3 id=&quot;configuring-aws-and-godaddy-settings&quot;&gt;Configuring AWS and GoDaddy settings&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html&quot;&gt;http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://steveliles.github.io/pointing_a_domain_name_to_an_amazon_s3_bucket.html&quot;&gt;http://steveliles.github.io/pointing_a_domain_name_to_an_amazon_s3_bucket.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://support.godaddy.com/groups/web-hosting/forum/topic/using-amazon-s3-with-godaddy-registered-domain/?pc_split_value=1&quot;&gt;http://support.godaddy.com/groups/web-hosting/forum/topic/using-amazon-s3-with-godaddy-registered-domain/?pc_split_value=1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dns--how-does-it-work&quot;&gt;DNS – How does it work?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mygreatname.com/how-dns-works/e-04-how-dns-works.htm&quot;&gt;http://www.mygreatname.com/how-dns-works/e-04-how-dns-works.htm&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://dyn.com/blog/dns-why-its-important-how-it-works/&quot;&gt;http://dyn.com/blog/dns-why-its-important-how-it-works/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Website" /><category term="AWS" /><summary type="html">One day, I decided I wanted to start a website. So then… now what? The following post describes the steps I took to purchase a domain name and get it set up with Amazon’s web hosting services.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Tutorial" /><category term="Octopress" /><category term="AWS" /><summary type="html">When I initially had the idea to start a blog, I was looking up how to set up WordPress with Amazon Web Services (AWS) - the web host I decided to use. Somehow, I ended up stumbling into Jekyll, which later led me to Octopress. The post describes the steps needed to set up Octopress with AWS. There are lots of posts out in the internets that describe other people’s experiences with Octopress. Here are a few… http://hiltmon.com/blog/2013/04/17/18-months-of-octopress/ http://nynim.org/blog/2011/12/19/hello-octopress/ http://openswitch.org/blog/why-octopress/ So how do we get octopress set up with AWS?</summary></entry></feed>

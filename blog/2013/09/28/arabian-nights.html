@@ -122,14 +122,14 @@
         
 <div class="image-wrapper">
     <a href="/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg" title="Wedding Hall">
-        <img src="/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg" alt="Wedding Hall" width="400" />
+        <img src="/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg" alt="Wedding Hall" />
     </a>
 </div>
 
 <!--
 
 <figure>
-    <img src="/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg" title="Wedding Hall"   width="400" />
+    <img src="/assets/posts/2013-09-28-arabian-nights/uaefrance001.jpg" title="Wedding Hall"  />
     <figcaption>Wedding Hall</figcaption>
 </figure>
 
@@ -245,6 +245,7 @@
 -->
 
 
+        <br />
     </div>
   </div>
 
@@ -288,12 +289,41 @@
 
 
         <script type="text/javascript">
+            // -----------------
+            // Mobile Menu
+            // -----------------
             $( ".menu" ).hide();
             $( ".hamburger" ).click(function() {
                 $( ".menu" ).slideToggle( "slow", function() {
                 });
             });
+
+            // -----------------
+            // Remove :hover from CSS on touch devices
+            // http://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+            // -----------------
+            var touch = 'ontouchstart' in document.documentElement
+            || navigator.maxTouchPoints > 0
+            || navigator.msMaxTouchPoints > 0;
+
+            if (touch) { // remove all :hover stylesheets
+                try { // prevent exception on browsers not supporting DOM styleSheets properly
+                    for (var si in document.styleSheets) {
+                        var styleSheet = document.styleSheets[si];
+                        if (!styleSheet.rules) continue;
+
+                        for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                            if (!styleSheet.rules[ri].selectorText) continue;
+
+                            if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                                styleSheet.deleteRule(ri);
+                            }
+                        }
+                    }
+                } catch (ex) {}
+            }
         </script>
+
         <!--[if !IE]><script>fixScale(document);</script><![endif]-->
         
     </body>

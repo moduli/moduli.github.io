@@ -113,6 +113,7 @@
     <div class="content">
         <p>I recently participated in the <a href="http://fishackathon.co">Boston Fishackathon</a>! Check out the project that my team created <a href="http://challengepost.com/software/yeah-buoii">here</a>.</p>
 
+        <br />
     </div>
   </div>
 
@@ -156,12 +157,41 @@
 
 
         <script type="text/javascript">
+            // -----------------
+            // Mobile Menu
+            // -----------------
             $( ".menu" ).hide();
             $( ".hamburger" ).click(function() {
                 $( ".menu" ).slideToggle( "slow", function() {
                 });
             });
+
+            // -----------------
+            // Remove :hover from CSS on touch devices
+            // http://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+            // -----------------
+            var touch = 'ontouchstart' in document.documentElement
+            || navigator.maxTouchPoints > 0
+            || navigator.msMaxTouchPoints > 0;
+
+            if (touch) { // remove all :hover stylesheets
+                try { // prevent exception on browsers not supporting DOM styleSheets properly
+                    for (var si in document.styleSheets) {
+                        var styleSheet = document.styleSheets[si];
+                        if (!styleSheet.rules) continue;
+
+                        for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                            if (!styleSheet.rules[ri].selectorText) continue;
+
+                            if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                                styleSheet.deleteRule(ri);
+                            }
+                        }
+                    }
+                } catch (ex) {}
+            }
         </script>
+
         <!--[if !IE]><script>fixScale(document);</script><![endif]-->
         
     </body>

@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Mycow's World</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/css/blog.css">
+
+        <script src="/assets/js/scale.fix.js"></script>
+        <script src="/assets/js/jquery-3.2.0.min.js"></script>
+        <script type="text/javascript" id="dsq-count-scr" async src="http://mycowsworld.disqus.com/count.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="mobile-menu">
+            <div id="menu-container">
+                <h1 class="header"><a class="header" href="http://www.mycowsworld.com">Mycow's World</a></h1>
+                <!-- social icons -->
+                <div id="mobile-social-buttons">
+                    <a class="header social-links fa-hover" href="http://www.github.com/moduli" target="_blank"><i class="fa fa-github fa-3x fa-hover" aria-hidden="true"></i></a>
+                    <a class="header social-links fa-hover" href="http://www.linkedin.com/in/moduli" target="_blank"><i class="fa fa-linkedin-square fa-3x fa-hover" aria-hidden="true"></i></a>
+                    <a class="header social-links fa-hover" href="mailto:mycowsworld@gmail.com"><i class="fa fa-envelope-square fa-3x fa-hover" aria-hidden="true"></i></a>
+                </div>
+
+                <button class="hamburger">&#9776;</button>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <a class="menu-item" href="http://www.mycowsworld.com"><li>Blog</li></a>
+                    <a class="menu-item" href="http://www.mycowsworld.com/projects"><li>Projects</li></a>
+                    <a class="menu-item" href="http://www.mycowsworld.com/about"><li>About</li></a>
+                    <a class="menu-item" href="http://www.mycowsworld.com/archive"><li>Archive</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <!-- HEADER -->
+            <header>
+                <h1 class="header"><a class="header" href="http://www.mycowsworld.com">Mycow's World</a></h1>
+                <p class="header">Hi, I'm Michael Li. Welcome to my world.
+</p>
+
+                <!-- site links -->
+                <div id="site-links">
+                    <ul>
+                        <li><a class="site-links" href="http://www.mycowsworld.com">Blog</a></li>
+                        <li><a class="site-links" href="http://www.mycowsworld.com/projects">Projects</a></li>
+                        <li><a class="site-links" href="http://www.mycowsworld.com/about">About</a></li>
+                        <li><a class="site-links" href="http://www.mycowsworld.com/archive">Archive</a></li>
+                    </ul>
+                </div>
+
+                <!-- social icons -->
+                <div>
+                    <a class="social-links fa-hover" href="http://www.github.com/moduli" target="_blank"><i class="fa fa-github fa-3x fa-hover" aria-hidden="true"></i></a>
+                    <a class="social-links fa-hover" href="http://www.linkedin.com/in/moduli" target="_blank"><i class="fa fa-linkedin-square fa-3x fa-hover" aria-hidden="true"></i></a>
+                    <a class="social-links fa-hover" href="mailto:mycowsworld@gmail.com"><i class="fa fa-envelope-square fa-3x fa-hover" aria-hidden="true"></i></a>
+                </div>
+
+                
+
+                
+            </header>
+
+            <!-- SECTION -->
+            <section>
+                <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <!-- add link to go to back to blog -->
+
+  <div class="post-content" itemprop="articleBody">
+
+    <h1 class="post-title" itemprop="name headline">Dominion (A Node.js Project)</h1>
+
+    <div class="post-meta">
+
+        <!-- post meta data -->
+        <time datetime="2017-04-26T00:00:00-04:00" itemprop="datePublished">Apr 26, 2017</time>
+        
+
+        <!-- comments -->
+        
+        <a class="blogcomments" href="/blog/2017/04/26/dominion-nodejs.html#disqus_thread">Comments</a>
+        
+
+        <!-- tags -->
+        <div class="tag">
+            <ul class="tag">
+                
+                <li class="tag">
+                    <a class="tag" href="http://www.mycowsworld.com/tags/tutorial"> Tutorial </a>
+                </li>
+                
+                <li class="tag">
+                    <a class="tag" href="http://www.mycowsworld.com/tags/javascript"> Javascript </a>
+                </li>
+                
+                <li class="tag">
+                    <a class="tag" href="http://www.mycowsworld.com/tags/node"> Node </a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <p></p>
+    </div>
+
+    <!-- post content -->
+    <div class="content">
+        <p>A few years ago, my friends and I got really into the card game <a href="http://riograndegames.com/Game/278-Dominion">Dominion</a>. It’s a deck building game, but what made this game more enjoyable was the variation. In each round, you randomly select 10 cards that will be available for purchase, and the goal is to try to figure out different strategies for how those cards can interact with each other. The game is available on <a href="https://www.amazon.com/Rio-Grande-Games-RGG370-Dominion/dp/B001JQY6K4/ref=sr_1_2?s=toys-and-games&amp;ie=UTF8&amp;qid=1493409679&amp;sr=1-2&amp;keywords=dominion">Amazon</a> and is playable online via the official <a href="https://dominion.games">Dominion Online</a> site.</p>
+
+<p>As a programming exercise, we attempted to create a similar game using Node.js. This post is to help me document the process we took to set up this project.</p>
+
+<!-- more -->
+
+<h2 id="step-1-install-nodejs">Step 1: Install Node.js</h2>
+<p>Node.js is a runtime, or a program, that executes Javascript code on a server, thus allowing users to program server-side code using Javascript. For a good description of Node.js, check out this <a href="https://openclassrooms.com/courses/ultra-fast-applications-using-node-js/node-js-what-is-it-for-exactly">link</a>.</p>
+
+<ul>
+  <li>Download and install <a href="https://nodejs.org/en/">Node.js</a>. The installer installs the Node.js and <a href="https://www.npmjs.com">npm</a>, a package manager for Javascript that allows you to quickly install libraries and other components.</li>
+  <li>Next, two libraries will be installed to help set up a server. <a href="http://expressjs.com">express</a> is used to easily instantiate the server, and <a href="https://socket.io">socket.io</a> is used for communication between server and client. To install, enter the following lines in a terminal</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-none" data-lang="none">$ npm install express
+$ npm install socket.io</code></pre></figure>
+
+<h2 id="step-2-set-up-server-code">Step 2: Set up Server Code</h2>
+<p>Create a .js file for your server code (e.g. server.js). The following code sets up an initial server that runs on port 8081.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"express"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">app</span>     <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">server</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">).</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">io</span>      <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"socket.io"</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span>    <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"path"</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">"public"</span><span class="p">)));</span> <span class="c1">// Setting static folder to 'public' (relative to server.js)</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">8081</span><span class="p">);</span></code></pre></figure>
+
+<p>For demonstration purposes, add a html file (index.html) to a folder named public. The file structure looks like this.</p>
+<ul>
+  <li>my_dir/server.js</li>
+  <li>my_dir/public/index.html</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>  
+<span class="nt">&lt;html&gt;</span>  
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span>    
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>  </code></pre></figure>
+
+<p>Then, start the server… (use Ctrl+C to stop the server)</p>
+
+<figure class="highlight"><pre><code class="language-none" data-lang="none">$ node server.js</code></pre></figure>
+
+<p>and access your file from your web browser with the following URL: <a href="http://127.0.0.1:8081">http://127.0.0.1:8081</a></p>
+
+<h2 id="step-3-server-message-handling">Step 3: Server Message Handling</h2>
+<p>Then, this code is used to set up message handling on the server side</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"connection"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// send a message to the client</span>
+    <span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">"&lt;message_name&gt;"</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">message_data</span><span class="o">&gt;</span><span class="p">);</span>
+
+    <span class="c1">// handler for message from client</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"&lt;message_name&gt;"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message_data</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// do stuff here</span>
+    <span class="p">}</span>
+
+    <span class="c1">// add more handlers...</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="step-4-client-message-handling">Step 4: Client Message Handling</h2>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/socket.io/socket.io.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>Add that to your client html page. This is served from your node server, which is available after installing socket.io.</p>
+
+<p>In a corresponding client.js file, the following code can be used to handle client messaging.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+
+<span class="c1">// send a message to the server</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">"&lt;message_name&gt;"</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">message_data</span><span class="o">&gt;</span><span class="p">);</span>
+
+<span class="c1">// handler for message from server</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"&lt;message_name&gt;"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message_data</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="step-5-serve-page">Step 5: Serve Page</h2>
+<ul>
+  <li>Log in to your router</li>
+  <li>Find the Port Forwarding Options</li>
+  <li>Add a new Port Forwarding Rule… HOST DEVICE, HTTP (Web - Port 80), Forwarding to Port 8081</li>
+  <li>Find the Router’s IP Address (usually somewhere on the main router page)</li>
+  <li>Give out <Router IP="" Address="">:80 to others</Router></li>
+</ul>
+
+<h2 id="references">References</h2>
+<h4 id="nodejs">Node.js</h4>
+<ul>
+  <li><a href="https://openclassrooms.com/courses/ultra-fast-applications-using-node-js/node-js-what-is-it-for-exactly">https://openclassrooms.com/courses/ultra-fast-applications-using-node-js/node-js-what-is-it-for-exactly</a></li>
+  <li><a href="http://stackoverflow.com/questions/1884724/what-is-node-js">http://stackoverflow.com/questions/1884724/what-is-node-js</a></li>
+  <li><a href="http://www.programwitherik.com/getting-started-with-socket-io-node-js-and-express/">http://www.programwitherik.com/getting-started-with-socket-io-node-js-and-express/</a></li>
+</ul>
+
+        <br />
+    </div>
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://www.mycowsworld.com/blog/2017/04/26/dominion-nodejs.html';
+      this.page.identifier = '/blog/2017/04/26/dominion-nodejs.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://mycowsworld.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+</article>
+
+<script type="text/javascript">
+	$(".site-links:contains('Blog'):parent").addClass("active-link");
+</script>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <!-- <p><small>Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a> using the <a href="https://github.com/pages-themes/dinky" target="_blank">Dinky</a> theme</small></p>-->
+                <!--<p class="rss-subscribe">Subscribe via <a href="/feed.xml">RSS</a></p>-->
+            </footer>
+        </div>
+
+
+        <script type="text/javascript">
+            // -----------------
+            // Mobile Menu
+            // -----------------
+            $( ".menu" ).hide();
+            $( ".hamburger" ).click(function() {
+                $( ".menu" ).slideToggle( "slow", function() {
+                });
+            });
+
+            // -----------------
+            // Remove :hover from CSS on touch devices
+            // http://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+            // -----------------
+            var touch = 'ontouchstart' in document.documentElement
+            || navigator.maxTouchPoints > 0
+            || navigator.msMaxTouchPoints > 0;
+
+            if (touch) { // remove all :hover stylesheets
+                try { // prevent exception on browsers not supporting DOM styleSheets properly
+                    for (var si in document.styleSheets) {
+                        var styleSheet = document.styleSheets[si];
+                        if (!styleSheet.rules) continue;
+
+                        for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                            if (!styleSheet.rules[ri].selectorText) continue;
+
+                            if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                                styleSheet.deleteRule(ri);
+                            }
+                        }
+                    }
+                } catch (ex) {}
+            }
+        </script>
+
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        
+    </body>
+</html>
