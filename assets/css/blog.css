@@ -91,9 +91,9 @@ a.site-links.active-link {
 	background: #5D6D7E;
 }
 
-#mobile-menu { 
+#mobile-menu {
   display: none;
-  width: 100%; 
+  width: 100%;
 
 }
 
@@ -112,9 +112,9 @@ a.site-links.active-link {
 
 
 #menu-container{
-  width:100%; 
-  background:black; 
-  height:60px; 
+  width:100%;
+  background:black;
+  height:60px;
   line-height:60px;
   border-bottom:1px solid #dddddd;
   display:inline-block; font-size:12px;
@@ -144,9 +144,9 @@ a.site-links.active-link {
 .menu a:hover{text-decoration:none; color:#666;}
 
 .glyphicon-home{
-  color:white; 
-  font-size:1.5em; 
-  margin-top:5px; 
+  color:white;
+  font-size:1.5em;
+  margin-top:5px;
   margin:0 auto;
 }
 a.menu-item{color:#336699;}
@@ -505,7 +505,7 @@ FROM DINKY THEME
   color: #bbbbbb; }
 
 .highlight {
-  background-color: #f8f8f8; 
+  background-color: #f8f8f8;
   margin-top: 20px;
 }
 
@@ -531,7 +531,7 @@ time, mark, audio, video {
 
 /* Base text styles */
 body {
-  /*padding: 10px 50px 0 0;*/  
+  /*padding: 10px 50px 0 0;*/
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #232323;
@@ -573,7 +573,8 @@ h4, h5, h6 {
 a {
   color: #C30000;
   font-weight: 200;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:hover {
   text-decoration: underline; }
@@ -818,12 +819,14 @@ footer {
     display: none;
   }
 
-
+  body {
+  }
 }
 
 @media print, screen and (max-width: 720px) {
   body {
-    word-wrap: break-word; }
+      word-wrap: break-word;
+  }
 
   header {
     padding: 10px 20px 60px;
@@ -878,9 +881,14 @@ footer {
       padding-left: 10px;
     }
 
+    body {
+
+    }
 
 @media print {
-  body {
-    padding: 0.4in;
-    font-size: 12pt;
-    color: #444; } }
+    body {
+        padding: 0.4in;
+        font-size: 12pt;
+        color: #444;
+    }
+}
